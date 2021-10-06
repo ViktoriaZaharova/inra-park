@@ -376,6 +376,48 @@ header {
     display: block;
     height: 3px; }
 
+.mobile-menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  max-width: 290px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: #ddda3c;
+  color: #fff;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 10px rgba(221, 218, 60, 0.4);
+          box-shadow: 0 0 10px rgba(221, 218, 60, 0.4);
+  display: none; }
+  .mobile-menu .menu {
+    margin: 30px 0 0; }
+    .mobile-menu .menu li {
+      margin: 0 0 20px;
+      width: 100%; }
+
+.btn-close {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 20px auto;
+  position: relative;
+  cursor: pointer; }
+  .btn-close:before, .btn-close:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #000;
+    left: 12px;
+    top: 0; }
+  .btn-close:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .btn-close:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+
 .home {
   position: relative; }
   .home .slider-nav {
@@ -788,7 +830,7 @@ header {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
+    right: -15px;
     height: 100%;
     z-index: -1;
     width: 2500px;
@@ -931,14 +973,15 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  height: 100%; }
 
 .accommodation-content {
   margin: 85px 0 0; }
@@ -956,7 +999,8 @@ header {
       background: #ededed;
       height: 100%;
       width: 2600px;
-      right: -1200px; }
+      right: -1200px;
+      top: 0; }
   .accommodation-content .box-text {
     margin: 28px 0 0;
     max-width: 740px;
@@ -1019,17 +1063,19 @@ header {
     width: 420px;
     height: 446px; }
 
-.advantages-section__box h3 {
-  font-size: 60px;
-  margin: 0 0 34px;
-  font-weight: bold;
-  color: #000; }
-
-.advantages-section__box .box-text {
-  line-height: 1.36;
-  font-size: 25px;
-  max-width: 515px;
-  width: 100%; }
+.advantages-section__box {
+  position: relative;
+  z-index: 1; }
+  .advantages-section__box h3 {
+    font-size: 60px;
+    margin: 0 0 34px;
+    font-weight: bold;
+    color: #000; }
+  .advantages-section__box .box-text {
+    line-height: 1.36;
+    font-size: 25px;
+    max-width: 515px;
+    width: 100%; }
 
 .sales-conditions-wrapper {
   background: url("../img/bg1.jpg") no-repeat center;
@@ -1285,44 +1331,496 @@ header {
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1920px) {
   .accommodation-img {
-    margin: 0 -40%; } }
+    margin: 0 -40%; }
+  .advantages-section:before {
+    width: 327px;
+    height: 349px; }
+  .advantages-section:after {
+    width: 320px;
+    height: 346px;
+    right: -40px; }
+  .advantages-section__box .box-text {
+    font-size: 20px; }
+  .advantages-section__box h3 {
+    font-size: 40px; } }
+
+@media only screen and (max-width: 1840px) {
+  .square-val {
+    margin: 0 0 16px; }
+  .location-content .box-text {
+    font-size: 28px; }
+  .distance {
+    font-size: 40px; } }
+
+@media only screen and (max-width: 1800px) {
+  .news-box {
+    width: calc(100% - 20px); }
+  .home-slider-box__content {
+    min-width: auto;
+    width: 100%; }
+  .home-slider-box .btn {
+    font-size: 20px;
+    max-width: 280px;
+    height: 60px;
+    padding: 0 20px; }
+  .home-slider-box__title {
+    font-size: 70px; }
+  .square-val {
+    font-size: 90px; }
+  .master-plan-box__head h2 {
+    font-size: 50px;
+    max-width: 300px; }
+  .type-cottage__content {
+    padding: 30px 60px 0; }
+  .price {
+    font-size: 70px; }
+  .price-wrapper:before {
+    left: -90px; } }
+
+@media only screen and (max-width: 1500px) {
+  .menu {
+    font-size: 18px; }
+    .menu li {
+      margin: 0 20px 0 0; }
+  .phone {
+    font-size: 18px;
+    padding: 10px 20px; }
+  header {
+    padding: 20px 0 24px; }
+  footer {
+    padding: 30px 0 34px; }
+  .news-box__body {
+    padding: 20px; }
+  .news-box__head {
+    font-size: 18px;
+    padding: 20px; }
+  .news-box__img {
+    height: 200px; }
+  .news {
+    padding: 50px 0 70px; }
+  .home-slider-box__title {
+    font-size: 60px;
+    padding: 0; }
+  .box-offer-text {
+    padding: 57px 60px 57px 0;
+    font-size: 20px; }
+  .master-plan {
+    min-height: 900px; }
+  .price {
+    font-size: 40px; }
+  .description-product {
+    font-size: 24px;
+    margin: 0 0 20px; }
+  .btn-reserved {
+    height: 60px;
+    font-size: 24px; }
+  .square-product {
+    font-size: 40px; }
+    .square-product sup {
+      font-size: 24px; }
+  .type-cottage__img {
+    height: 500px; }
+  .nav-tabs {
+    font-size: 24px; }
+    .nav-tabs .nav-link {
+      height: 90px; }
+  .type-cottage__content {
+    padding: 30px 30px 0; }
+  .price-wrapper:before {
+    left: -60px; }
+  .square-product:before {
+    left: -44px; }
+  .btn-plane {
+    height: 60px; }
+  .type-cottage {
+    padding: 80px 0; }
+  .about-img .image {
+    max-width: 420px; }
+  .logo-company {
+    max-width: 600px; }
+  .about-content {
+    padding: 0; }
+  .accommodation-img {
+    width: 1100px;
+    margin: 0 -25%; }
+  .accommodation {
+    padding: 70px 0 0; }
+  .advantages-box h3 {
+    font-size: 24px; }
+  .transport h2, .transport h3 {
+    font-size: 40px; }
+  .location-content {
+    padding: 30px 10px; }
+  .sales-conditions-list__box h3 {
+    font-size: 40px; }
+  .sales-conditions-list__box .box-text {
+    font-size: 22px; } }
+
+@media only screen and (max-width: 1280px) {
+  .master-plan-box__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .master-plan-box__head h2 {
+      max-width: none;
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      margin: 0 0 20px; }
+  .square {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+    border: none;
+      border-top: 1px solid #ddda3c; } }
 
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  .logo {
+    max-width: 160px; }
+  .menu {
+    font-size: 16px; }
+  .phone {
+    font-size: 16px; }
+  h2 {
+    font-size: 40px; }
+  .news-slider .slick-arrow {
+    width: 60px;
+    height: 60px; }
+  .home-slider-box__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 30px; }
+    .home-slider-box__content .box-text {
+      width: 100%;
+      margin: 0 0 20px; }
+  .choosing-a-home:before {
+    width: 200px;
+    height: 180px; }
+  .choosing-a-home-slider__box {
+    width: 650px;
+    margin: 0 30px 0 0; }
+  .master-plan-box .box-text {
+    font-size: 16px;
+    line-height: normal; }
+  .about-content h3 {
+    font-size: 22px; }
+  .about-content .box-text {
+    font-size: 20px;
+    line-height: normal; }
+  .accommodation-content .box-text {
+    font-size: 20px; }
+  .accommodation-content h3 {
+    font-size: 40px; }
+  .advantages-box {
+    padding: 30px; }
+    .advantages-box h3 {
+      font-size: 20px; }
+  .sales-conditions-wrapper h2 {
+    font-size: 80px; }
+  .bid {
+    font-size: 60px; }
+  .sales-conditions-wrapper .box-text {
+    font-size: 20px; } }
 
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 1100px) {
+  header .menu, footer .menu {
+    display: none; }
+  header .logo, footer .logo {
+    margin: 0 auto 0 0; }
+  .btn-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
 @media only screen and (max-width: 992px) {
-  /**/ }
+  .home-slider-box__title {
+    margin: 0 0 30px;
+    font-size: 50px; }
+  .slick-arrow {
+    width: 60px;
+    height: 60px; }
+  .type-cottage__content {
+    max-width: none;
+    padding: 30px 15px; }
+  .square-product:before {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    margin: 0 10px 0 0; }
+  .nav-tabs {
+    font-size: 20px; }
+    .nav-tabs .nav-link {
+      height: 70px; }
+  .description-product {
+    font-size: 20px; }
+  .price {
+    font-size: 30px;
+    margin: 0 0 20px; }
+  .about-content {
+    max-width: none;
+    padding: 30px 0; }
+    .about-content h3 {
+      margin: 0 0 30px; }
+  .decor3 {
+    right: -15px;
+    max-width: 100px; }
+  .accommodation-img {
+    width: 100%;
+    margin: 0 -15px 0 15px; }
+  .accommodation-content {
+    margin: 40px 0 0; }
+    .accommodation-content h3 {
+      font-size: 30px;
+      padding: 10px 0; }
+    .accommodation-content .box-text {
+      font-size: 18px; }
+      .accommodation-content .box-text br {
+        display: none; }
+  .advantages {
+    padding: 50px 0; }
+  .advantages-section__box {
+    max-width: 400px;
+    margin: 0 auto 30px; }
+    .advantages-section__box h3 {
+      margin: 0 0 20px;
+      font-size: 30px; }
+    .advantages-section__box .box-text {
+      font-size: 18px; }
+  .advantages-section {
+    padding: 70px 0 50px; }
+    .advantages-section:before {
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      width: 220px;
+      height: 280px; }
+    .advantages-section:after {
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      width: 220px;
+      height: 280px; }
+  .transport-timetable {
+    padding: 0; }
+  .transport h2, .transport h3 {
+    font-size: 30px; }
+  .transport .box-text, .list-timetable {
+    font-size: 20px; }
+  .distance {
+    margin: 40px auto 10px;
+    max-width: none;
+    font-size: 30px; }
+  .location-content {
+    padding: 30px 0; }
+    .location-content .box-text {
+      font-size: 20px; }
+  .location-map {
+    width: 100%;
+    height: 500px; }
+  .sales-conditions-list__box-two, .sales-conditions-list__box {
+    padding: 30px 0; }
+    .sales-conditions-list__box-two h3, .sales-conditions-list__box h3 {
+      font-size: 30px;
+      margin: 0 0 20px; }
+    .sales-conditions-list__box-two .box-text, .sales-conditions-list__box .box-text {
+      max-width: none;
+      font-size: 18px; }
+      .sales-conditions-list__box-two .box-text br, .sales-conditions-list__box .box-text br {
+        display: none; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /**/ }
+  footer {
+    padding: 20px 0 24px; }
+  h2, .master-plan-box__head h2 {
+    font-size: 30px; }
+  .news h2 {
+    margin: 0 0 30px; }
+  .news-slider .slick-arrow {
+    width: 50px;
+    height: 50px; }
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+    background-size: 10px; }
+  .choosing-a-home-slider__box {
+    width: 100%;
+    margin: 0; }
+  .choosing-a-home-slider {
+    min-width: auto; }
+  .box-offer-text {
+    font-size: 18px;
+    padding: 30px; }
+  .choosing-a-home {
+    padding: 40px 0; }
+  .square-val {
+    font-size: 60px; }
+    .square-val span {
+      font-size: 30px;
+      margin: 0; }
+  .master-plan-box .box-text {
+    max-width: none; }
+  .master-plan-box {
+    padding: 20px 0; }
+  .master-plan {
+    min-height: 700px; }
+  .type-cottage h2 {
+    margin: 0 0 30px; }
+  .about-img .image {
+    max-width: 300px; }
+  .decor2 {
+    z-index: 0; }
+  .advantages-section__box {
+    max-width: 280px; }
+    .advantages-section__box h3 {
+      font-size: 24px;
+      margin: 0 0 20px; }
+  .sales-conditions-wrapper h2 {
+    font-size: 60px; }
+  .bid {
+    font-size: 30px; }
+  .sales-conditions-wrapper {
+    padding: 40px 0 30px; }
+  .list-bank {
+    padding: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .list-bank .box-text {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      border: none;
+        border-top: 1px solid #000;
+      padding: 10px 0 0;
+      margin: 20px 0 0; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 576px) {
+  .news-box {
+    width: 100%; }
+  .home-slider-box__title {
+    font-size: 40px;
+    line-height: normal; }
+  .home-slider-box {
+    padding: 300px 0 130px; }
+  .choosing-a-home:after {
+    width: 100px;
+    height: 120px; }
+  .nav-tabs .nav-item {
+    width: 33.3%;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto; }
+  .type-cottage__img {
+    height: 400px; }
+  .about-img {
+    padding: 30px; }
+  .logo-company {
+    max-width: 300px; }
+  .about-img .image {
+    max-width: 200px; }
+  .about-content .box-text {
+    font-size: 18px; }
+  .type-cottage {
+    padding: 40px 0; }
+  .accommodation-content h3 {
+    font-size: 24px; }
+  .advantages-section:before {
+    width: 160px;
+    height: 200px; }
+  .advantages-section:after {
+    width: 160px;
+    height: 200px; }
+  .location-map {
+    height: 400px; } }
+
 @media only screen and (max-width: 480px) {
-  /**/ }
+  .logo {
+    max-width: 120px; }
+  .phone {
+    font-size: 14px;
+    padding: 5px 10px; }
+  .btn-burger {
+    width: 20px;
+    height: 14px;
+    margin: 0 0 0 10px; }
+    .btn-burger span {
+      height: 2px; }
+  .price-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .mortgage-val {
+    margin: 0 0 10px; }
+  .nav-tabs .nav-item {
+    width: 50%; }
+  .list-characteristics li {
+    width: 100%;
+    margin: 0 0 10px; }
+  .btn-reserved {
+    font-size: 20px;
+    height: 50px; }
+  .square-product:before {
+    width: 30px;
+    height: 30px; }
+  .type-cottage__img {
+    height: 300px; }
+  .advantages-section {
+    padding: 30px 0 200px; }
+    .advantages-section:after, .advantages-section:before {
+      top: auto;
+      bottom: 0;
+      -webkit-transform: none;
+              transform: none;
+      height: 170px; }
+    .advantages-section:before {
+      left: -60px; }
+    .advantages-section:after {
+      right: -20px; }
+  .location-map {
+    height: 300px; }
+  .distance {
+    font-size: 24px; }
+  .location-content .box-text {
+    font-size: 18px; }
+  .transport-icon {
+    max-width: 100px; }
+  .sales-conditions-list__box-two h3, .sales-conditions-list__box h3 {
+    font-size: 24px; }
+  .list-bank__item {
+    width: 50%;
+    margin: 0 0 10px; }
+  .sales-conditions-wrapper h2 {
+    font-size: 50px; }
+  .sales-conditions-wrapper .box-text {
+    font-size: 18px; } }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
-  /**/ }
-
-/*==========  Mobile First  ==========*/
-/* Custom, iPhone Retina */
-@media only screen and (min-width: 320px) {
-  /**/ }
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  /**/ }
-
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-  /**/ }
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-  /**/ }
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
-  /**/ }
+@media only screen and (max-width: 360px) {
+  .phone {
+    font-size: 12px; }
+  .logo {
+    max-width: 110px; }
+  header {
+    padding: 15px 0 20px; }
+  .decor1 {
+    max-width: 120px; }
+  .decor2 {
+    max-width: 100px; }
+  .decor3 {
+    max-width: 80px; } }
