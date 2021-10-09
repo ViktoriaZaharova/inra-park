@@ -113,13 +113,27 @@ input, textarea, select
   outline: none
   box-shadow: none
   appearance: none
-  padding: 0
+  padding: 0 20px
   box-sizing: border-box
   font-family: $default-font
-
+  width: 100%
+  height: 50px
+  border: 1px solid $grey
+  font-size: 15px
   &:hover, &:focus
     outline: none
     box-shadow: none
+
+label
+  width: 100%
+  display: block
+  margin: 0 0 15px
+
+.form
+  button
+    padding: 10px 20px
+    margin: 0 auto
+
 
 .btn, button
   outline: none
@@ -787,7 +801,7 @@ header
   z-index: 2
 
 .decor3
-  right: 0
+  right: -15px
   top: -30px
 
 .about-content
@@ -1115,9 +1129,27 @@ header
 
 
 //location
+.location
+  .tab-content, .tab-pane
+    width: 100%
+    height: 100%
+  .nav-link
+    border: solid 1px #000
+    font-size: 17px
+    font-weight: bold
+    height: 114px
+  .nav-link.active
+    border: solid 1px #000
+  .nav-tabs
+    .nav-item
+      margin: -1px 0 0
+      width: 100%
+      flex: auto
+
 .location-map
-  height: 795px
-  width: 1151px
+  height: 100%
+  width: calc(100% + 30px)
+  margin: 0 0 0 -15px
   float: right
   display: flex
   align-items: center
@@ -1130,7 +1162,7 @@ header
     object-fit: cover
 
 .location-content
-  padding: 79px 10px 116px 40px
+  padding: 79px 10px 50px 40px
   height: 100%
 
   .box-text
@@ -1258,6 +1290,69 @@ header
     .btn-icon
       width: 6px
 
+.modal-content
+  border: none
+  padding: 30px
+
+.modal-header, .modal-body
+  padding: 0
+  border: none
+
+.modal-header
+  padding: 0 0 20px
+  .close
+    position: absolute
+    right: 10px
+    top: 10px
+    padding: 0
+    width: 20px
+    height: 20px
+    cursor: pointer
+    margin: 0
+    z-index: 1
+    opacity: 1
+    &:before, &:after
+      content: ''
+      position: absolute
+      left: 9px
+      top: 0
+      width: 2px
+      height: 100%
+      background: #000
+      border-radius: 3px
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(135deg)
+
+.modal-body
+  .box-text
+    font-size: 14px
+
+.modal-title
+  width: 100%
+  text-align: center
+  font-weight: bold
+  font-size: 22px
+
+.modal-dialog-scrollable .modal-body
+  overflow-y: visible
+
+
+.modal-dialog-scrollable .modal-content
+  overflow-y: auto
+
+.plane-modal
+  .modal-dialog
+    max-width: 98%
+
+.plane-img-scheme
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
 
 @import "media"
 // Всегда в конце

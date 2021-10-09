@@ -27,10 +27,11 @@
     margin: 0 0 16px
 
   .location-content .box-text
-    font-size: 28px
+    font-size: 26px
 
   .distance
-    font-size: 40px
+    font-size: 34px
+    margin: 40px 0 20px
 
 
 @media only screen and (max-width: 1800px)
@@ -193,6 +194,9 @@
     padding: 10px 0 0
     border: none
       top: 1px solid $accent
+
+  .location-content .box-text
+    font-size: 22px
 
 @media only screen and (max-width: 1200px)
   .logo
@@ -370,8 +374,9 @@
       font-size: 20px
 
   .location-map
-    width: 100%
     height: 500px
+    width: calc(100% + 30px)
+    margin: 0 -15px
 
   .sales-conditions-list__box-two, .sales-conditions-list__box
     padding: 30px 0
@@ -384,7 +389,12 @@
       br
         display: none
 
-
+  .location .nav-tabs
+    width: calc(100% + 30px)
+    margin: 0 -15px
+    .nav-item
+      width: 25%
+      margin: -1px -1px 0 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
@@ -525,6 +535,10 @@
   .location-map
     height: 400px
 
+  .location .nav-tabs .nav-item
+    width: 33.3%
+    font-size: 16px
+
 @media only screen and (max-width: 480px)
   .logo
     max-width: 120px
@@ -602,6 +616,9 @@
 
   .sales-conditions-wrapper .box-text
     font-size: 18px
+
+  .location .nav-tabs .nav-item
+    width: 50%
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 360px)
