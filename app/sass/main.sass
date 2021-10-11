@@ -452,6 +452,7 @@ header
   font-size: 83px
   font-weight: bold
   color: #fff
+  line-height: .96
 
 .home-slider-box__content
   background: #fff
@@ -578,6 +579,8 @@ header
 
 .type-cottage__img
   width: 100%
+  min-width: 1420px
+  float: right
   height: 647px
   overflow: hidden
   position: relative
@@ -1138,7 +1141,15 @@ header
 
 //location
 .location
-  .tab-content, .tab-pane
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: center
+  .tab-content
+    width: calc(100% - 720px - 233px)
+    //height: 100%
+  .tab-pane
     width: 100%
     height: 100%
   .nav-link
@@ -1149,15 +1160,18 @@ header
   .nav-link.active
     border: solid 1px #000
   .nav-tabs
+    max-width: 233px
+    width: 100%
     .nav-item
       margin: -1px 0 0
       width: 100%
       flex: auto
 
 .location-map
+  width: 100%
   height: 100%
-  width: calc(100% + 30px)
-  margin: 0 0 0 -15px
+  max-height: 797px
+  //margin: 0 0 0 -15px
   float: right
   display: flex
   align-items: center
@@ -1171,8 +1185,10 @@ header
 
 .location-content
   padding: 79px 10px 50px 40px
-  height: 100%
-
+  //height: 100%
+  max-width: 720px
+  width: 100%
+  order: 1
   .box-text
     font-size: 35px
     line-height: 1.17

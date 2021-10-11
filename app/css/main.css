@@ -479,7 +479,8 @@ header {
   padding: 0 0 0 60px;
   font-size: 83px;
   font-weight: bold;
-  color: #fff; }
+  color: #fff;
+  line-height: .96; }
 
 .home-slider-box__content {
   background: #fff;
@@ -617,6 +618,8 @@ header {
 
 .type-cottage__img {
   width: 100%;
+  min-width: 1420px;
+  float: right;
   height: 647px;
   overflow: hidden;
   position: relative;
@@ -1214,30 +1217,45 @@ header {
   max-width: 760px;
   width: 100%; }
 
-.location .tab-content, .location .tab-pane {
+.location {
   width: 100%;
-  height: 100%; }
-
-.location .nav-link {
-  border: solid 1px #000;
-  font-size: 17px;
-  font-weight: bold;
-  height: 114px; }
-
-.location .nav-link.active {
-  border: solid 1px #000; }
-
-.location .nav-tabs .nav-item {
-  margin: -1px 0 0;
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .location .tab-content {
+    width: calc(100% - 720px - 233px); }
+  .location .tab-pane {
+    width: 100%;
+    height: 100%; }
+  .location .nav-link {
+    border: solid 1px #000;
+    font-size: 17px;
+    font-weight: bold;
+    height: 114px; }
+  .location .nav-link.active {
+    border: solid 1px #000; }
+  .location .nav-tabs {
+    max-width: 233px;
+    width: 100%; }
+    .location .nav-tabs .nav-item {
+      margin: -1px 0 0;
+      width: 100%;
+      -webkit-box-flex: 1;
+          -ms-flex: auto;
+              flex: auto; }
 
 .location-map {
+  width: 100%;
   height: 100%;
-  width: calc(100% + 30px);
-  margin: 0 0 0 -15px;
+  max-height: 797px;
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,7 +1275,11 @@ header {
 
 .location-content {
   padding: 79px 10px 50px 40px;
-  height: 100%; }
+  max-width: 720px;
+  width: 100%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
   .location-content .box-text {
     font-size: 35px;
     line-height: 1.17; }
@@ -1446,20 +1468,20 @@ header {
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1980px) {
+  .home-slider-box__content {
+    min-width: auto; } }
+
 @media only screen and (max-width: 1920px) {
   .accommodation-img {
     margin: 0 -40%; }
   .advantages-section:before {
-    width: 327px;
-    height: 349px; }
+    width: 427px;
+    height: 449px; }
   .advantages-section:after {
-    width: 320px;
-    height: 346px;
-    right: -40px; }
-  .advantages-section__box .box-text {
-    font-size: 20px; }
-  .advantages-section__box h3 {
-    font-size: 40px; } }
+    width: 420px;
+    height: 446px;
+    right: -40px; } }
 
 @media only screen and (max-width: 1840px) {
   .square-val {
@@ -1468,7 +1490,15 @@ header {
     font-size: 26px; }
   .distance {
     font-size: 34px;
-    margin: 40px 0 20px; } }
+    margin: 40px 0 20px; }
+  .advantages-section:before {
+    width: 357px;
+    height: 379px; }
+  .advantages-section:after {
+    width: 340px;
+    height: 376px; }
+  .type-cottage__img {
+    min-width: auto; } }
 
 @media only screen and (max-width: 1800px) {
   .news-box {
@@ -1572,7 +1602,22 @@ header {
   .sales-conditions-list__box h3 {
     font-size: 40px; }
   .sales-conditions-list__box .box-text {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .advantages-section__box h3 {
+    font-size: 50px; }
+  .advantages-section__box .box-text {
+    font-size: 24px; }
+  .advantages-section:before {
+    width: 307px;
+    height: 339px;
+    left: -70px; }
+  .advantages-section:after {
+    width: 300px;
+    height: 330px; }
+  .location-content {
+    max-width: 540px; }
+  .location .tab-content {
+    width: calc(100% - 540px - 233px); } }
 
 @media only screen and (max-width: 1280px) {
   .master-plan-box__head {
@@ -1596,7 +1641,11 @@ header {
     border: none;
       border-top: 1px solid #ddda3c; }
   .location-content .box-text {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .advantages-section__box h3 {
+    font-size: 40px; }
+  .advantages-section__box .box-text {
+    font-size: 20px; } }
 
 @media only screen and (max-width: 1200px) {
   .logo {
@@ -1649,7 +1698,20 @@ header {
   .bid {
     font-size: 60px; }
   .sales-conditions-wrapper .box-text {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .advantages-section:before {
+    width: 267px;
+    height: 309px;
+    top: -40px; }
+  .advantages-section:after {
+    width: 270px;
+    height: 306px; }
+  .location-content {
+    max-width: 400px; }
+  .location .tab-content {
+    width: calc(100% - 400px - 180px); }
+  .location .nav-tabs {
+    max-width: 180px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px) {
@@ -1742,11 +1804,15 @@ header {
     max-width: none;
     font-size: 30px; }
   .location-content {
-    padding: 30px 0; }
+    padding: 30px 15px;
+    width: 100%;
+    max-width: none; }
     .location-content .box-text {
       font-size: 20px; }
   .location-map {
-    height: 500px;
+    height: 500px; }
+  .location .tab-content {
+    max-width: none;
     width: calc(100% + 30px);
     margin: 0 -15px; }
   .sales-conditions-list__box-two, .sales-conditions-list__box {
@@ -1761,6 +1827,7 @@ header {
         display: none; }
   .location .nav-tabs {
     width: calc(100% + 30px);
+    max-width: none;
     margin: 0 -15px; }
     .location .nav-tabs .nav-item {
       width: 25%;

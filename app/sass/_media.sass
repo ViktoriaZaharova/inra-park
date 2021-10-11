@@ -3,24 +3,23 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1980px)
+  .home-slider-box__content
+    min-width: auto
+
 @media only screen and (max-width: 1920px)
   .accommodation-img
     margin: 0 -40%
 
   .advantages-section:before
-    width: 327px
-    height: 349px
+    width: 427px
+    height: 449px
 
   .advantages-section:after
-    width: 320px
-    height: 346px
+    width: 420px
+    height: 446px
     right: -40px
 
-  .advantages-section__box .box-text
-    font-size: 20px
-
-  .advantages-section__box h3
-    font-size: 40px
 
 @media only screen and (max-width: 1840px)
   .square-val
@@ -32,6 +31,18 @@
   .distance
     font-size: 34px
     margin: 40px 0 20px
+
+
+  .advantages-section:before
+    width: 357px
+    height: 379px
+
+  .advantages-section:after
+    width: 340px
+    height: 376px
+
+  .type-cottage__img
+    min-width: auto
 
 
 @media only screen and (max-width: 1800px)
@@ -179,6 +190,27 @@
     .box-text
       font-size: 22px
 
+  .advantages-section__box
+    h3
+      font-size: 50px
+    .box-text
+      font-size: 24px
+
+  .advantages-section:before
+    width: 307px
+    height: 339px
+    left: -70px
+
+  .advantages-section:after
+    width: 300px
+    height: 330px
+
+  .location-content
+    max-width: 540px
+
+  .location .tab-content
+    width: calc(100% - 540px - 233px)
+
 @media only screen and (max-width: 1280px)
   .master-plan-box__head
     flex-direction: column
@@ -197,6 +229,12 @@
 
   .location-content .box-text
     font-size: 22px
+
+  .advantages-section__box
+    h3
+      font-size: 40px
+    .box-text
+      font-size: 20px
 
 @media only screen and (max-width: 1200px)
   .logo
@@ -261,6 +299,24 @@
 
   .sales-conditions-wrapper .box-text
     font-size: 20px
+
+  .advantages-section:before
+    width: 267px
+    height: 309px
+    top: -40px
+
+  .advantages-section:after
+    width: 270px
+    height: 306px
+
+  .location-content
+    max-width: 400px
+
+  .location .tab-content
+    width: calc(100% - 400px - 180px)
+
+  .location .nav-tabs
+    max-width: 180px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1100px)
@@ -369,12 +425,17 @@
     font-size: 30px
 
   .location-content
-    padding: 30px 0
+    padding: 30px 15px
+    width: 100%
+    max-width: none
     .box-text
       font-size: 20px
 
   .location-map
     height: 500px
+
+  .location .tab-content
+    max-width: none
     width: calc(100% + 30px)
     margin: 0 -15px
 
@@ -391,6 +452,7 @@
 
   .location .nav-tabs
     width: calc(100% + 30px)
+    max-width: none
     margin: 0 -15px
     .nav-item
       width: 25%
