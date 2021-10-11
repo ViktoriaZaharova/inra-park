@@ -75,3 +75,26 @@ $('.go_to').on('click', function (e) {
 //плавный скролл end
 
 $('[name="phone"]').mask('+7 (999) 999-99-99');
+
+$('.btn-plane').on('click', function (e) {
+    e.preventDefault();
+    var
+        $this = $(this),
+        img1 = $(this).parent('.type-cottage__img').find('.img-photo-house'),
+        img2 = $(this).parent('.type-cottage__img').find('.img-plane-house');
+
+    if(!$this.hasClass('trigger')){
+        $this.addClass('trigger');
+        $this.find('.btn-text').html('Фото дома');
+
+        img2.show();
+        img1.hide();
+
+    } else {
+        $this.removeClass('trigger');
+        $this.find('.btn-text').html('Планировка');
+
+        img1.show();
+        img2.hide();
+    }
+});

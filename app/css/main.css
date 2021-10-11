@@ -68,8 +68,7 @@ body {
   color: #000; }
 
 html, body {
-  overflow-x: hidden;
-  height: 100%; }
+  overflow-x: hidden; }
 
 .wrapper {
   display: -webkit-box;
@@ -635,6 +634,8 @@ header {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .type-cottage__img .img-plane-house {
+    display: none; }
 
 .btn-plane {
   position: absolute;
@@ -669,24 +670,37 @@ header {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 0 25px; }
+  margin: 0 0 25px;
+  position: relative; }
 
 .square-product {
   font-size: 53px;
   font-weight: 600;
   line-height: 0.87;
   position: relative; }
-  .square-product:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -63px;
-    width: 37px;
-    height: 37px;
-    background: url("../img/size-icon.png") no-repeat center;
-      background-size: 100%; }
   .square-product sup {
     font-size: 34px; }
+
+.square-product__btn {
+  position: absolute;
+  top: 10px;
+  left: -63px;
+  width: 37px;
+  height: 37px; }
+
+.square-product__btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.square-product-gallery {
+  display: none; }
 
 .btn-print {
   width: 60px;
@@ -1532,7 +1546,7 @@ header {
     padding: 30px 30px 0; }
   .price-wrapper:before {
     left: -60px; }
-  .square-product:before {
+  .square-product__btn {
     left: -44px; }
   .btn-plane {
     height: 60px; }
@@ -1658,7 +1672,7 @@ header {
   .type-cottage__content {
     max-width: none;
     padding: 30px 15px; }
-  .square-product:before {
+  .square-product__btn {
     position: relative;
     left: 0;
     top: 0;
@@ -1891,7 +1905,7 @@ header {
   .btn-reserved {
     font-size: 20px;
     height: 50px; }
-  .square-product:before {
+  .square-product__btn {
     width: 30px;
     height: 30px; }
   .type-cottage__img {
