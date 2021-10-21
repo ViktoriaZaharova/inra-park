@@ -1892,7 +1892,10 @@ header {
     margin: 0 -15px; }
     .location .nav-tabs .nav-item {
       width: 25%;
-      margin: -1px -1px 0 0; } }
+      margin: -1px -1px 0 0; }
+  .copyright {
+    margin: 20px auto 0;
+    text-align: center; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1995,10 +1998,12 @@ header {
   .location .nav-tabs .nav-item {
     width: 33.3%;
     font-size: 16px; }
-  header .list-social {
+  header .list-social, footer .list-social {
     display: none; }
   .subtitle-product {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .copyright {
+    font-size: 10px; } }
 
 @media only screen and (max-width: 480px) {
   .logo {
