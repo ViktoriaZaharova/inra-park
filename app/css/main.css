@@ -732,8 +732,17 @@ header {
 
 .type-cottage__content {
   width: 40%;
-  padding: 29px 85px;
-  height: 100%; }
+  padding: 29px 85px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .type-cottage__head {
   width: 100%;
@@ -830,7 +839,8 @@ header {
           justify-content: space-between;
   line-height: 0.88;
   font-size: 16px;
-  padding: 21px 0; }
+  padding: 21px 0;
+  width: 100%; }
   .price-wrapper:before {
     content: '';
     position: absolute;
@@ -851,7 +861,8 @@ header {
       font-weight: bold; }
 
 .details-info {
-  margin: 22px 0 10px; }
+  margin: 22px 0 auto;
+  width: 100%; }
   .details-info h4 {
     margin: 0 0 21px;
     font-weight: bold; }
@@ -1320,7 +1331,8 @@ header {
 
 .sales-conditions-list__box-wrap {
   max-width: 760px;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .location {
   width: 100%;
@@ -1565,7 +1577,11 @@ header {
     width: 340px;
     height: 376px; }
   .type-cottage__img {
-    min-width: auto; } }
+    min-width: auto; }
+  h2 {
+    font-size: 50px; }
+  .nav-tabs .nav-link {
+    height: 80px; } }
 
 @media only screen and (max-width: 1800px) {
   .news-box {
@@ -1635,7 +1651,7 @@ header {
   .price {
     font-size: 40px; }
   .description-product {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0 0 20px; }
   .btn-reserved {
     height: 60px;
@@ -1644,10 +1660,14 @@ header {
     font-size: 40px; }
     .square-product sup {
       font-size: 24px; }
+  h2 {
+    font-size: 40px; }
+  .subtitle-product {
+    font-size: 30px; }
   .nav-tabs {
-    font-size: 24px; }
+    font-size: 20px; }
     .nav-tabs .nav-link {
-      height: 90px; }
+      height: 80px; }
   .type-cottage__content {
     padding: 30px 30px 0 50px; }
   .price-wrapper:before {
@@ -1833,8 +1853,6 @@ header {
     font-size: 20px; }
     .nav-tabs .nav-link {
       height: 70px; }
-  .description-product {
-    font-size: 20px; }
   .price {
     font-size: 30px;
     margin: 0 0 20px; }
