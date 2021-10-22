@@ -571,7 +571,7 @@ header
 
 .choosing-a-home-slider__nav
   position: absolute
-  right: 0
+  right: 10px
   bottom: 0
 
 .choosing-a-home-slider__box
@@ -587,6 +587,10 @@ header
 
   h2
     margin: 0 0 40px
+  .nav-tabs
+    .nav-item
+      width: 20%
+      flex: auto
 
 .nav-tabs
   width: 100%
@@ -624,10 +628,11 @@ header
     color: #000
 
 .type-cottage__img
-  width: 100%
-  min-width: 1420px
-  float: right
-  height: 647px
+  width: 60%
+  //width: calc(100% - 769px)
+  //min-width: 1420px
+  //float: right
+  //height: 100%
   overflow: hidden
   position: relative
   display: flex
@@ -640,6 +645,8 @@ header
     object-fit: cover
   .img-plane-house
     display: none
+    height: auto
+    object-fit: contain
 
 
 .btn-plane
@@ -657,9 +664,16 @@ header
   .btn-icon
     width: 6px
 
-.type-cottage__content
-  max-width: 767px
+.type-cottage-content__wrapper
   width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: center
+
+.type-cottage__content
+  //max-width: 769px
+  width: 40%
   padding: 29px 85px
   height: 100%
 
@@ -682,8 +696,9 @@ header
 
 .square-product__btn
   position: absolute
-  top: 10px
-  left: -63px
+  top: 50%
+  transform: translate(0,-50%)
+  left: -60px
   width: 37px
   height: 37px
 
@@ -737,7 +752,7 @@ header
     content: ''
     position: absolute
     top: 0
-    left: -115px
+    left: -85px
     height: 100%
     width: 2500px
     background: #ededed
