@@ -91,7 +91,7 @@ footer {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   background: #ddda3c;
-  padding: 57px 0 50px; }
+  padding: 39px 0 34px; }
 
 img {
   display: block;
@@ -313,7 +313,7 @@ h2 {
 
 header {
   background: #ddda3c;
-  padding: 24px 0 34px;
+  padding: 14px 0 24px;
   position: fixed;
   z-index: 5;
   left: 0;
@@ -321,7 +321,7 @@ header {
   width: 100%; }
 
 .logo {
-  max-width: 299px;
+  max-width: 233px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,9 +370,9 @@ header {
 
 .phone {
   color: #fff;
-  padding: 17px 37px;
+  padding: 15px 30px;
   background: #161800;
-  font-size: 30px;
+  font-size: 24.5px;
   font-weight: bold;
   -webkit-box-shadow: 0 10px 10px rgba(22, 24, 0, 0.4);
           box-shadow: 0 10px 10px rgba(22, 24, 0, 0.4); }
@@ -446,7 +446,7 @@ header {
             transform: rotate(135deg); }
 
 .list-social {
-  margin: 0 48px 0 0;
+  margin: 0 88px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,7 +813,7 @@ header {
 
 .subtitle-product {
   margin: 0 0 21px;
-  font-size: 68.5px;
+  font-size: 54px;
   font-weight: bold;
   line-height: .77;
   color: #ddda3c; }
@@ -1022,7 +1022,7 @@ header {
 .master-plan {
   position: relative;
   width: 100%;
-  min-height: 1270px;
+  min-height: 1033px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1412,9 +1412,9 @@ header {
   line-height: 0.87; }
 
 .copyright {
-  margin: 27px 0 0 auto;
-  font-size: 12.5px;
-  max-width: 509px;
+  margin: 24px 0 0 auto;
+  font-size: 14px;
+  max-width: 488px;
   width: 100%; }
 
 .news {
@@ -1608,8 +1608,6 @@ header {
     left: -34px; }
   .price-wrapper:before {
     left: -60px; }
-  .phone {
-    font-size: 24px; }
   .logo {
     max-width: 200px; }
   .menu li {
@@ -1619,6 +1617,10 @@ header {
   .subtitle-product {
     font-size: 40px; } }
 
+@media only screen and (max-width: 1600px) {
+  .description-product {
+    font-size: 28px; } }
+
 @media only screen and (max-width: 1500px) {
   .menu {
     font-size: 18px; }
@@ -1627,8 +1629,6 @@ header {
   .phone {
     font-size: 18px;
     padding: 10px 20px; }
-  header {
-    padding: 20px 0 24px; }
   footer {
     padding: 30px 0 34px; }
   .news-box__body {
@@ -1653,6 +1653,8 @@ header {
   .description-product {
     font-size: 18px;
     margin: 0 0 20px; }
+    .description-product br {
+      display: none; }
   .btn-reserved {
     height: 60px;
     font-size: 24px; }
@@ -1711,7 +1713,9 @@ header {
   .location .tab-content {
     width: calc(100% - 540px - 233px); }
   .content {
-    padding: 103px 0 0; } }
+    padding: 103px 0 0; }
+  .list-social {
+    margin: 0 30px 0 0; } }
 
 @media only screen and (max-width: 1280px) {
   .master-plan-box__head {
