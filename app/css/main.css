@@ -84,7 +84,7 @@ html, body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 146px 0 0; }
+  padding: 106px 0 0; }
 
 footer {
   -webkit-box-flex: 0;
@@ -646,8 +646,8 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   border: none;
-  line-height: 0.85;
-  font-size: 34px;
+  line-height: 0.87;
+  font-size: 33.5px;
   font-weight: bold; }
   .nav-tabs .nav-item {
     -webkit-box-flex: 1;
@@ -659,7 +659,7 @@ header {
   .nav-tabs .nav-link {
     border: solid 1px #ddda3c;
       border-radius: 0;
-    height: 123px;
+    height: 92px;
     padding: 10px;
     color: #000;
     text-align: center;
@@ -1022,7 +1022,7 @@ header {
 .master-plan {
   position: relative;
   width: 100%;
-  min-height: 1033px;
+  min-height: 938px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1057,7 +1057,7 @@ header {
   width: fit-content;
   position: relative;
   z-index: 1;
-  padding: 51px 65px 59px 0; }
+  padding: 51px 65px 0 0; }
   .master-plan-box:before {
     content: '';
     position: absolute;
@@ -1070,7 +1070,8 @@ header {
   .master-plan-box .box-text {
     max-width: 650px;
     width: 100%;
-    font-size: 23px; }
+    font-size: 23px;
+    line-height: 1.17; }
 
 .master-plan-box__head {
   display: -webkit-box;
@@ -1079,7 +1080,7 @@ header {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 0 0 23px;
+  margin: 0 0 24px;
   width: 100%; }
   .master-plan-box__head h2 {
     max-width: 430px; }
@@ -1098,7 +1099,7 @@ header {
   font-weight: bold;
   line-height: 0.79;
   font-size: 134px;
-  margin: 0 0 16px -15px; }
+  margin: 0 0 15px -15px; }
   .square-val span {
     line-height: 0.8;
     font-size: 61px;
@@ -1391,7 +1392,7 @@ header {
        object-fit: cover; }
 
 .location-content {
-  padding: 79px 10px 50px 40px;
+  padding: 79px 10px 50px 47px;
   max-width: 720px;
   width: 100%;
   -webkit-box-ordinal-group: 2;
@@ -1401,6 +1402,9 @@ header {
   .location-content .box-text {
     font-size: 35px;
     line-height: 1.17; }
+  .location-content__wrapper {
+    max-width: 593px;
+    width: 100%; }
 
 .distance {
   margin: 69px 0 23px;
@@ -1613,7 +1617,7 @@ header {
   .menu li {
     margin: 0 24px 0 0; }
   .content {
-    padding: 121px 0 0; }
+    padding: 98px 0 0; }
   .subtitle-product {
     font-size: 40px; } }
 
@@ -1692,7 +1696,7 @@ header {
   .advantages-box h3 {
     font-size: 24px; }
   .location-content {
-    padding: 30px 10px; }
+    padding: 40px 30px; }
   .sales-conditions-list__box h3 {
     font-size: 40px; }
   .sales-conditions-list__box .box-text {
@@ -1713,7 +1717,7 @@ header {
   .location .tab-content {
     width: calc(100% - 540px - 233px); }
   .content {
-    padding: 103px 0 0; }
+    padding: 97px 0 0; }
   .list-social {
     margin: 0 30px 0 0; } }
 
@@ -1751,7 +1755,7 @@ header {
   .logo {
     max-width: 170px; }
   .content {
-    padding: 94px 0 0; } }
+    padding: 88px 0 0; } }
 
 @media only screen and (max-width: 1200px) {
   .logo {
@@ -1822,7 +1826,7 @@ header {
   .location .nav-tabs {
     max-width: 180px; }
   .content {
-    padding: 91px 0 0; }
+    padding: 85px 0 0; }
   .subtitle-product {
     font-size: 40px;
     line-height: 1; } }
@@ -2118,7 +2122,7 @@ header {
   .location .nav-tabs .nav-item {
     width: 50%; }
   .content {
-    padding: 79px 0 0; } }
+    padding: 73px 0 0; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 360px) {
