@@ -556,7 +556,7 @@ header {
 
 .choosing-a-home {
   position: relative;
-  padding: 103px 0 80px; }
+  padding: 103px 0 107px; }
   .choosing-a-home:before {
     content: '';
     position: absolute;
@@ -623,7 +623,7 @@ header {
   width: 724px; }
 
 .type-cottage {
-  padding: 108px 0; }
+  padding: 89px 0; }
   .type-cottage h2 {
     margin: 0 0 40px; }
   .type-cottage .nav-tabs .nav-item {
