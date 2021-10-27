@@ -1022,7 +1022,6 @@ header {
 .master-plan {
   position: relative;
   width: 100%;
-  min-height: 938px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1040,11 +1039,7 @@ header {
 .master-plan-img {
   width: 100%;
   height: 100%;
-  background: #ededed;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden; }
+  background: #ededed; }
   .master-plan-img img {
     width: 100%;
     height: 100%;
@@ -1055,13 +1050,15 @@ header {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  position: relative;
   z-index: 1;
-  padding: 51px 65px 0 0; }
+  padding: 51px 65px 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
   .master-plan-box:before {
     content: '';
     position: absolute;
-    right: -30px;
+    right: 0;
     top: 0;
     background: #fff;
     width: 2000px;
@@ -1585,7 +1582,9 @@ header {
   h2 {
     font-size: 50px; }
   .nav-tabs .nav-link {
-    height: 80px; } }
+    height: 80px; }
+  .master-plan-box {
+    padding: 51px 65px 0 20px; } }
 
 @media only screen and (max-width: 1800px) {
   .news-box {
@@ -1650,8 +1649,6 @@ header {
   .box-offer-text {
     padding: 57px 60px 57px 0;
     font-size: 20px; }
-  .master-plan {
-    min-height: 900px; }
   .price {
     font-size: 40px; }
   .description-product {
@@ -1719,7 +1716,9 @@ header {
   .content {
     padding: 97px 0 0; }
   .list-social {
-    margin: 0 30px 0 0; } }
+    margin: 0 30px 0 0; }
+  .master-plan-box__head h2 {
+    font-size: 40px; } }
 
 @media only screen and (max-width: 1280px) {
   .master-plan-box__head {
@@ -1948,6 +1947,12 @@ header {
     right: 0; } }
 
 /* Small Devices, Tablets */
+@media only screen and (max-width: 860px) {
+  .master-plan-box {
+    position: relative;
+    left: 0;
+    bottom: 0; } }
+
 @media only screen and (max-width: 768px) {
   footer {
     padding: 20px 0 24px; }
@@ -1974,8 +1979,6 @@ header {
     max-width: none; }
   .master-plan-box {
     padding: 20px 0; }
-  .master-plan {
-    min-height: 700px; }
   .type-cottage h2 {
     margin: 0 0 30px; }
   .about-img .image {
