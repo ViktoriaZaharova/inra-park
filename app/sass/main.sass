@@ -1,41 +1,20 @@
-@import "fonts"
-@import "vars"
-
 *
   -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
   box-sizing: border-box
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
   &:before, &:after
     -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
     box-sizing: border-box
 
-*::-webkit-input-placeholder
-  color: #666
-  opacity: 1
+  &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
+    color: #666
+    opacity: 1
 
-*:-moz-placeholder
-  color: #666
-  opacity: 1
-
-*::-moz-placeholder
-  color: #666
-  opacity: 1
-
-*:-ms-input-placeholder
-  color: #666
-  opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #666
-
-body input:required:valid,
-body textarea:required:valid
-  color: #666
+body
+  input:focus:required:invalid, textarea:focus:required:invalid, input:required:valid, textarea:required:valid
+    color: #666
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   margin: 0
@@ -45,7 +24,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit
   vertical-align: baseline
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
   display: block
 
@@ -55,9 +35,15 @@ ol, ul
 blockquote, q
   quotes: none
 
-blockquote:before, blockquote:after, q:before, q:after
-  content: ''
-  content: none
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
 
 table
   border-collapse: collapse
@@ -68,28 +54,38 @@ body
   min-width: 320px
   position: relative
   line-height: normal
-  font-family: $default-font
+  font-family: "Montserrat", sans-serif
   font-weight: normal
   background: #fff
   color: #000
 
 html, body
   overflow-x: hidden
-  //height: 100%
 
 .wrapper
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
   min-height: 100%
 
 .content
+  -webkit-box-flex: 1
+  -ms-flex: 1 0 auto
   flex: 1 0 auto
-  padding: 106px 0 0
+  padding: 115px 0 0
 
 footer
+  -webkit-box-flex: 0
+  -ms-flex: 0 0 auto
   flex: 0 0 auto
-  background: $accent
-  padding: 39px 0 34px
+  background: #ddda3c
+  padding: 42px 0 40px
+  .list-social
+    margin: 0 54px 0 0
 
 img
   display: block
@@ -102,27 +98,48 @@ img
 a
   display: block
   text-decoration: none
+  -webkit-transition: .3s ease
   transition: .3s ease
   outline: none
 
   &:hover, &:focus
     text-decoration: none
     outline: none
+    -webkit-box-shadow: none
     box-shadow: none
 
 input, textarea, select
   outline: none
+  -webkit-box-shadow: none
   box-shadow: none
+  -webkit-appearance: none
+  -moz-appearance: none
   appearance: none
   padding: 0 20px
+  -webkit-box-sizing: border-box
   box-sizing: border-box
-  font-family: $default-font
+  font-family: "Montserrat", sans-serif
   width: 100%
   height: 50px
-  border: 1px solid $grey
+  border: 1px solid #ededed
   font-size: 15px
+
+input
   &:hover, &:focus
     outline: none
+    -webkit-box-shadow: none
+    box-shadow: none
+
+textarea
+  &:hover, &:focus
+    outline: none
+    -webkit-box-shadow: none
+    box-shadow: none
+
+select
+  &:hover, &:focus
+    outline: none
+    -webkit-box-shadow: none
     box-shadow: none
 
 label
@@ -130,50 +147,67 @@ label
   display: block
   margin: 0 0 15px
 
-.form
-  button
-    padding: 10px 20px
-    margin: 0 auto
-
+.form button
+  padding: 10px 20px
+  margin: 0 auto
 
 .btn, button
   outline: none
+  -webkit-box-shadow: none
   box-shadow: none
   padding: 0
   margin: 0
-  font-family: $default-font
+  font-family: "Montserrat", sans-serif
   cursor: pointer
+  -webkit-transition: .3s ease
   transition: .3s ease
   border-radius: 0
 
+.btn
   &:hover, &:focus
     outline: none
+    -webkit-box-shadow: none
+    box-shadow: none
+
+button
+  &:hover, &:focus
+    outline: none
+    -webkit-box-shadow: none
     box-shadow: none
 
 .btn
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   font-weight: bold
   padding: 10px
+  width: -webkit-fit-content
+  width: -moz-fit-content
   width: fit-content
 
 .btn-accent
-  background: $accent
-  color: $black
-  box-shadow: 0 10px 10px rgba($accent, .4)
+  background: #ddda3c
+  color: #161800
+  -webkit-box-shadow: 0 10px 10px rgba(221, 218, 60, 0.4)
+  box-shadow: 0 10px 10px rgba(221, 218, 60, 0.4)
 
   &:hover
-    background: $grey
-    color: $black
+    background: #ededed
+    color: #161800
 
 .btn-border
   background: transparent
-  border: solid 1px $black
+  border: solid 1px #161800
 
   &:hover
-    background: $accent
-    border-color: $accent
+    background: #ddda3c
+    border-color: #ddda3c
     color: #161800
 
 .btn-white
@@ -181,7 +215,7 @@ label
   color: #000
 
   &:hover
-    background: $accent
+    background: #ddda3c
     color: #000
 
 .btn-black
@@ -189,23 +223,28 @@ label
   color: #fff
 
   .btn-icon
+    -webkit-filter: brightness(0) invert(1)
     filter: brightness(0) invert(1)
 
   &:hover
     color: #fff
-    background: $accent
+    background: #ddda3c
 
 .btn-icon
-  max-width: 14px
+  max-width: 10px
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
-
 
 .container
   max-width: 1830px
-
 
 .slick-slide
   outline: none
@@ -229,8 +268,14 @@ strong
 
 .slick-arrow
   position: relative
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   width: 38px
   height: 38px
@@ -243,36 +288,50 @@ strong
   border: none
 
   &:hover
-    background: $accent
+    background: #ddda3c
 
 .slick-prev
   background: #fff url("../img/arrow-left.png") no-repeat center
-    size: 7px
+  background-size: 7px
 
   &:hover
-    background: $accent url("../img/arrow-left.png") no-repeat center
-      size: 7px
+    background: #ddda3c url("../img/arrow-left.png") no-repeat center
+    background-size: 7px
 
 .slick-next
   background: #fff url("../img/arrow-right.png") no-repeat center
-    size: 7px
+  background-size: 7px
 
   &:hover
-    background: $accent url("../img/arrow-right.png") no-repeat center
-      size: 7px
+    background: #ddda3c url("../img/arrow-right.png") no-repeat center
+    background-size: 7px
 
-.slider-nav, .home-slider-nav
+.slider-nav
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
-
 .home-slider-nav
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: end
+  -ms-flex-pack: end
   justify-content: flex-end
+
   .slick-arrow
     border: 1px solid #000
     background-color: transparent
+
     &:hover
-      background-color: $accent
+      background-color: #ddda3c
+
   .slick-next
     margin: 0 0 0 -1px
 
@@ -284,44 +343,56 @@ h2
   line-height: 0.9
 
 .bg-accent
-  background: $accent
+  background: #ddda3c
 
 .mb-30
   margin-bottom: 30px
 
-//header
 header
-  background: $accent
-  padding: 14px 0 24px
+  background: #ddda3c
+  padding: 22px 0 29px
   position: fixed
   z-index: 5
   left: 0
   top: 0
   width: 100%
 
+.fixed
+  background: rgba(#ddda3c, .5)
+
 .logo
-  max-width: 233px
+  max-width: 297px
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
   justify-content: flex-start
 
 .menu
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 auto
-  font-size: 20px
+  font-size: 16px
   font-weight: 500
 
   li
-    margin: 0 44px 0 0
+    margin: 0 35px 0 0
 
     &:last-child
       margin: 0
 
     a
-
       color: #000
       position: relative
 
@@ -332,7 +403,8 @@ header
         bottom: -14px
         height: 3px
         width: 0
-        background: $black
+        background: #161800
+        -webkit-transition: .3s ease
         transition: .3s ease
 
       &:hover
@@ -344,28 +416,35 @@ header
 
 .phone
   color: #fff
-  padding: 15px 30px
-  background: $black
-  font-size: 24.5px
+  padding: 13px 20px
+  background: #161800
+  font-size: 18px
   font-weight: bold
-  box-shadow: 0 10px 10px rgba($black, .4)
+  -webkit-box-shadow: 0 10px 10px rgba(22, 24, 0, 0.4)
+  box-shadow: 0 10px 10px rgba(22, 24, 0, 0.4)
 
   &:hover
-    color: $accent
-
+    color: #ddda3c
 
 .btn-burger
   margin: 0 0 0 20px
   width: 30px
   height: 20px
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   cursor: pointer
   display: none
 
   span
-    background: $black
+    background: #161800
     width: 100%
     display: block
     height: 3px
@@ -379,16 +458,20 @@ header
   width: 100%
   height: 100%
   overflow-y: auto
-  background: $accent
+  background: #ddda3c
   color: #fff
   padding: 30px
-  box-shadow: 0 0 10px rgba($accent, .4)
+  -webkit-box-shadow: 0 0 10px rgba(221, 218, 60, 0.4)
+  box-shadow: 0 0 10px rgba(221, 218, 60, 0.4)
   display: none
+
   .menu
     margin: 30px 0 0
+
     li
       margin: 0 0 20px
       width: 100%
+
   .list-social
     margin: 20px 0 0
 
@@ -398,6 +481,7 @@ header
   margin: 0 0 20px auto
   position: relative
   cursor: pointer
+
   &:before, &:after
     content: ''
     position: absolute
@@ -406,34 +490,51 @@ header
     background: #000
     left: 12px
     top: 0
+
   &:before
+    -webkit-transform: rotate(45deg)
     transform: rotate(45deg)
+
   &:after
+    -webkit-transform: rotate(135deg)
     transform: rotate(135deg)
 
 .list-social
-  margin: 0 88px 0 0
+  margin: 0 54px 0 0
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+
   li
     margin: 0 15px 0 0
+
     &:last-child
       margin: 0
+
     a
+      display: -webkit-box
+      display: -ms-flexbox
       display: flex
+      -webkit-box-align: center
+      -ms-flex-align: center
       align-items: center
+      -webkit-box-pack: center
+      -ms-flex-pack: center
       justify-content: center
       border: solid 1px #000
       width: 36px
       height: 36px
       padding: 7px
+
       &:hover
-        background: $grey
+        background: #ededed
 
-
-
-//home
 .home
   position: relative
 
@@ -446,11 +547,48 @@ header
 
 .home-slider
   position: relative
+  .slick-dots
 
+    bottom: 58px
+
+.slick-dots
+  width: 100%
+  position: absolute
+  left: 0
+  z-index: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  li
+    width: 11px
+    height: 11px
+    cursor: pointer
+    transition: .3s ease
+    border-radius: 50%
+    background: #fff
+    position: relative
+    border: none
+    margin: 0 28px 0 0
+    &:last-child
+      margin: 0
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      border-radius: 50%
+      width: 28px
+      height: 28px
+
+    button
+      display: none
+  .slick-active
+    &:before
+      background: rgba(#fff, .38)
 
 .home-slider-box
   position: relative
-  padding: 500px 0 100px
   z-index: 1
 
   &:before
@@ -465,78 +603,60 @@ header
     z-index: 1
 
   .btn
-    font-size: 26px
-    max-width: 323px
+    font-size: 19.5px
+    max-width: 240px
     width: 100%
-    height: 72px
-    padding: 0 32px 0 42px
+    height: 55px
+    padding: 0 25px 0 30px
 
   .container
     position: relative
     z-index: 2
 
-
 .home-slider__bg
   width: 100%
   height: 100%
+  -o-object-fit: cover
   object-fit: cover
   position: absolute
   left: 0
   top: 0
 
 .home-slider-box__title
-  padding: 0 0 0 60px
-  font-size: 83px
+  font-size: 60px
   font-weight: bold
   color: #fff
   line-height: .96
+  max-width: 550px
+  width: 100%
 
 .home-slider-box__content
   position: relative
-  margin: 0 0 0 auto
-  padding: 33px 0 28px 49px
-  display: flex
-  align-items: center
   z-index: 1
   width: 100%
+  color: #fff
+  padding: 388px 0 105px
   &:before
     content: ''
     position: absolute
-    left: 0
-    top: 0
+    left: -132px
     height: 100%
-    width: 2560px
-    background: #fff
+    top: 0
+    width: 1064px
+    background: url("../img/shadow-home.png") no-repeat center
+      size: cover
     z-index: -1
   .box-text
-    max-width: 435px
-    margin: 0 auto 0 0
+    max-width: 478px
+    margin: 31px 0 0 0
+    font-weight: 500
+    p
+  .btn
+    margin: 50px 0 0 auto
 
-
-//choosing-a-home
 .choosing-a-home
   position: relative
   padding: 103px 0 107px
-
-  &:before
-    content: ''
-    position: absolute
-    left: 0
-    top: -145px
-    width: 286px
-    height: 224px
-    background: url("../img/decor2.png") no-repeat center
-      size: 100%
-
-  &:after
-    content: ''
-    position: absolute
-    right: 0
-    top: 0
-    background: url("../img/decor1.png") no-repeat center
-      size: 100%
-    width: 143px
-    height: 159px
 
   .box-text
     margin: 30px 0 35px
@@ -558,8 +678,7 @@ header
     top: 0
     height: 100%
     width: 2000px
-
-    background: $accent
+    background: #ddda3c
     z-index: -1
 
 .choosing-a-home-content
@@ -575,28 +694,44 @@ header
   bottom: 0
 
 .choosing-a-home-slider__box
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   margin: 0 75px 0 0
   width: 724px
 
-//type-cottage
 .type-cottage
-  padding: 89px 0
+  padding: 50px 0 89px
+
+  /*padding: 89px 0;
 
   h2
     margin: 0 0 40px
-  .nav-tabs
-    .nav-item
-      width: 20%
-      flex: auto
+
+  .nav-tabs .nav-item
+    width: 20%
+    -webkit-box-flex: 1
+    -ms-flex: auto
+    flex: auto
 
 .nav-tabs
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   border: none
   line-height: 0.87
@@ -604,6 +739,8 @@ header
   font-weight: bold
 
   .nav-item
+    -webkit-box-flex: 1
+    -ms-flex: 1
     flex: 1
     margin: 0 -1px 0 0
 
@@ -612,42 +749,52 @@ header
 
   .nav-link
     border: solid 1px #ddda3c
-      radius: 0
+    border-radius: 0
     height: 92px
     padding: 10px
     color: #000
     text-align: center
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
     justify-content: center
     margin: 0
 
-  .nav-link.active
-    background: $accent
-    border: 1px solid $accent
-    color: #000
+    &.active
+      background: #ddda3c
+      border: 1px solid #ddda3c
+      color: #000
 
 .type-cottage__img
   width: 60%
-  //width: calc(100% - 769px)
-  //min-width: 1420px
-  //float: right
-  //height: 100%
   overflow: hidden
   position: relative
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
+
   .img-plane-house
     display: none
     height: auto
+    -o-object-fit: contain
     object-fit: contain
-
 
 .btn-plane
   position: absolute
@@ -666,26 +813,44 @@ header
 
 .type-cottage-content__wrapper
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .type-cottage__content
-  //max-width: 769px
   width: 40%
   padding: 29px 85px 0
-  //height: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
-
 
 .type-cottage__head
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0 0 25px
   position: relative
@@ -695,20 +860,28 @@ header
   font-weight: 600
   line-height: 0.87
   position: relative
+
   sup
     font-size: 34px
 
 .square-product__btn
   position: absolute
   top: 50%
-  transform: translate(0,-50%)
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
   left: -60px
   width: 37px
   height: 37px
 
 .square-product__btn-wrap
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .square-product-gallery
@@ -717,8 +890,14 @@ header
 .btn-print
   width: 44px
   height: 44px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
 
 .description-product
@@ -737,7 +916,7 @@ header
 
 .price
   margin: 0 0 35px
-  color: $accent
+  color: #ddda3c
   font-size: 84px
   font-weight: bold
   line-height: 0.87
@@ -745,8 +924,14 @@ header
 .price-wrapper
   position: relative
   z-index: 1
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   line-height: 0.88
   font-size: 16px
@@ -777,22 +962,36 @@ header
 .details-info
   margin: 22px 0 auto
   width: 100%
+
   h4
     margin: 0 0 21px
     font-weight: bold
 
 .list-characteristics
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
   color: #808080
 
   li
     width: 47%
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
     margin: 0 0 20px
     position: relative
@@ -804,7 +1003,7 @@ header
       bottom: 2px
       height: 1px
       width: 100%
-      border-bottom: 1px dotted $grey
+      border-bottom: 1px dotted #ededed
 
   p
     position: relative
@@ -822,27 +1021,33 @@ header
     sup
       font-size: 13px
 
-
 .btn-reserved
   width: 100%
   height: 97px
   font-size: 35px
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
 
-.tab-content
-  .container
-    padding: 0
+.tab-content .container
+  padding: 0
 
-//about
-.about
-  .container
-    max-width: 1950px
+.about .container
+  max-width: 1950px
 
 .logo-company
   max-width: 847px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   width: 100%
   margin: 0 0 0 auto
@@ -860,7 +1065,7 @@ header
     height: 100%
     z-index: -1
     width: 2500px
-    background: $accent
+    background: #ddda3c
 
   .image
     position: absolute
@@ -868,8 +1073,14 @@ header
     bottom: 0
     max-width: 624px
     width: 100%
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
     align-items: center
+    -webkit-box-pack: end
+    -ms-flex-pack: end
     justify-content: flex-end
 
 .decor
@@ -890,9 +1101,18 @@ header
 
 .about-content
   height: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
   align-items: flex-start
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   max-width: 640px
   width: 100%
@@ -908,39 +1128,44 @@ header
     font-weight: 600
     line-height: 1.06
 
-
-//master-plan
 .master-plan
   position: relative
   width: 100%
-  //min-height: 938px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
   flex-direction: column
+  -webkit-box-align: end
+  -ms-flex-align: end
   align-items: flex-end
+  -webkit-box-pack: end
+  -ms-flex-pack: end
   justify-content: flex-end
 
 .master-plan-img
   width: 100%
   height: 100%
-  background: $grey
-  //position: absolute
-  //left: 0
-  //top: 0
-  //overflow: hidden
+  background: #ededed
+
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
-
 .master-plan-box
+  width: -webkit-fit-content
+  width: -moz-fit-content
   width: fit-content
-  //position: relative
   z-index: 1
   padding: 51px 65px 0 0
   position: absolute
   left: 0
   bottom: 0
+
   &:before
     content: ''
     position: absolute
@@ -958,7 +1183,11 @@ header
     line-height: 1.17
 
 .master-plan-box__head
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
   margin: 0 0 24px
   width: 100%
@@ -977,7 +1206,7 @@ header
     max-width: 190px
 
 .square-val
-  color: $accent
+  color: #ddda3c
   font-weight: bold
   line-height: 0.79
   font-size: 134px
@@ -988,7 +1217,6 @@ header
     font-size: 61px
     margin: 0 0 0 -25px
 
-//accommodation
 .accommodation
   padding: 103px 0 0
 
@@ -1000,8 +1228,14 @@ header
 
 .accommodation-img
   width: 1373px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: end
+  -ms-flex-align: end
   align-items: flex-end
+  -webkit-box-pack: end
+  -ms-flex-pack: end
   justify-content: flex-end
   position: relative
   z-index: 1
@@ -1019,6 +1253,7 @@ header
     width: 100%
     line-height: 0.9
     padding: 27px 0 20px
+
     &:before
       content: ''
       position: absolute
@@ -1036,8 +1271,6 @@ header
     font-size: 25px
     line-height: 1.36
 
-
-//.advantages
 .advantages
   padding: 100px 0 70px
 
@@ -1055,19 +1288,24 @@ header
     font-weight: bold
     margin: 10px 0 17px
 
-  &__icon
-    display: flex
-    align-items: center
-    justify-content: flex-start
-    height: 123px
+.advantages-box__icon
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+  height: 123px
 
-    img
-      max-height: 100%
+  img
+    max-height: 100%
 
-  .box-text
-    line-height: 1.28
+.advantages-box .box-text
+  line-height: 1.28
 
-//advantages-section
 .advantages-section
   z-index: 1
   padding: 110px 0
@@ -1081,7 +1319,7 @@ header
     width: 467px
     height: 499px
     background: url("../img/kids1.png") no-repeat center
-      size: 100%
+    background-size: 100%
     z-index: -1
 
   &:after
@@ -1090,13 +1328,14 @@ header
     right: 43px
     top: -50px
     background: url("../img/kids2.png") no-repeat center
-      size: 100%
+    background-size: 100%
     width: 420px
     height: 446px
 
 .advantages-section__box
   position: relative
   z-index: 1
+
   h3
     font-size: 60px
     margin: 0 0 34px
@@ -1109,11 +1348,9 @@ header
     max-width: 515px
     width: 100%
 
-
-//sales-conditions
 .sales-conditions-wrapper
   background: url("../img/bg1.jpg") no-repeat center
-    size: cover
+  background-size: cover
   padding: 87px 0 58px
 
   h2
@@ -1127,14 +1364,21 @@ header
   margin: 22px 0 13px
   font-size: 74px
   font-weight: bold
-  color: $accent
+  color: #ddda3c
   line-height: 0.8
 
 .list-bank
   margin: 32px 0 29px
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
   justify-content: space-between
   border: solid 1px #161800
   padding: 8px 40px
@@ -1146,11 +1390,16 @@ header
     border-left: solid 1px #161800
     max-width: 130px
 
-  &__item
-    display: flex
-    align-items: center
-    justify-content: center
-
+.list-bank__item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
 
 .sales-conditions__content
   width: 100%
@@ -1170,23 +1419,24 @@ header
 .sales-conditions-list
   width: 100%
 
-  &__box
-    width: 100%
+.sales-conditions-list__box
+  width: 100%
+  height: 100%
+  position: relative
+  z-index: 1
+  padding: 56px 67px 49px 0
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    right: -15px
     height: 100%
-    position: relative
-    z-index: 1
-    padding: 56px 67px 49px 0
+    width: 2000px
+    border: solid 1px #161800
+    z-index: -1
 
-    &:before
-      content: ''
-      position: absolute
-      top: 0
-      right: -15px
-      height: 100%
-      width: 2000px
-      border: solid 1px #161800
-      z-index: -1
-
+.sales-conditions-list
   .box-text
     font-size: 25px
     line-height: 1.36
@@ -1217,74 +1467,92 @@ header
   &:before
     left: -15px
     right: auto
-
     border-left: none
-
-
 
 .sales-conditions-list__box-wrap
   max-width: 760px
   width: 100%
   height: 100%
 
-
-//location
 .location
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
   align-items: stretch
+  -ms-flex-wrap: wrap
   flex-wrap: wrap
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+
   .tab-content
     width: calc(100% - 720px - 233px)
-    //height: 100%
+
   .tab-pane
     width: 100%
     height: 100%
+
   .nav-link
     border: solid 1px #000
     font-size: 17px
     font-weight: bold
     height: 114px
-  .nav-link.active
-    border: solid 1px #000
+
+    &.active
+      border: solid 1px #000
+
   .nav-tabs
     max-width: 233px
     width: 100%
+
     .nav-item
       margin: -1px 0 0
       width: 100%
+      -webkit-box-flex: 1
+      -ms-flex: auto
       flex: auto
 
 .location-map
   width: 100%
   height: 100%
   max-height: 797px
-  //margin: 0 0 0 -15px
   float: right
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
   overflow: hidden
 
   img
     width: 100%
     height: 100%
+    -o-object-fit: cover
     object-fit: cover
 
 .location-content
   padding: 79px 10px 50px 47px
-  //height: 100%
   max-width: 720px
   width: 100%
+  -webkit-box-ordinal-group: 2
+  -ms-flex-order: 1
   order: 1
   background: #ddda3c
+
   .box-text
     font-size: 35px
     line-height: 1.17
-  &__wrapper
-    max-width: 593px
-    width: 100%
+
+.location-content__wrapper
+  max-width: 593px
+  width: 100%
 
 .distance
   margin: 69px 0 23px
@@ -1295,15 +1563,12 @@ header
   width: 100%
   line-height: 0.87
 
-
-
 .copyright
-  margin: 24px 0 0 auto
-  font-size: 14px
-  max-width: 488px
+  margin: 20px 0 0 auto
+  font-size: 10px
+  max-width: 435px
   width: 100%
 
-//news
 .news
   padding: 78px 0 111px
 
@@ -1316,8 +1581,8 @@ header
   .slick-arrow
     position: absolute
     top: 50%
+    -webkit-transform: translate(0, -50%)
     transform: translate(0, -50%)
-
 
   .slick-prev
     left: 20px
@@ -1331,46 +1596,53 @@ header
   margin: 0 auto
   background: #ededed
 
-  &__head
+.news-box__head
+  width: 100%
+  padding: 37px 36px 23px
+  font-size: 20px
+  font-weight: bold
+
+.news-box__img
+  width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  overflow: hidden
+  height: 234px
+
+  img
     width: 100%
-    padding: 37px 36px 23px
-    font-size: 20px
-    font-weight: bold
+    height: 100%
+    -o-object-fit: cover
+    object-fit: cover
 
-  &__img
-    width: 100%
-    display: flex
-    align-items: center
-    justify-content: center
-    overflow: hidden
-    height: 234px
+.news-box__body
+  width: 100%
+  padding: 22px 23px 23px 35px
 
-    img
-      width: 100%
-      height: 100%
-      object-fit: cover
+  .box-text
+    font-size: 16px
+    line-height: 1.19
+    color: #000
+    max-width: 320px
 
-  &__body
-    width: 100%
-    padding: 22px 23px 23px 35px
+.news-box .btn
+  margin: 20px 0 0 auto
+  border: solid 1px #161800
+  font-size: 10px
+  padding: 0 13px 0 16px
+  height: 27px
+  max-width: 122px
+  width: 100%
 
-    .box-text
-      font-size: 16px
-      line-height: 1.19
-      color: #000
-      max-width: 320px
-
-  .btn
-    margin: 20px 0 0 auto
-    border: solid 1px #161800
-    font-size: 10px
-    padding: 0 13px 0 16px
-    height: 27px
-    max-width: 122px
-    width: 100%
-
-    .btn-icon
-      width: 6px
+  .btn-icon
+    width: 6px
 
 .modal-content
   border: none
@@ -1382,6 +1654,7 @@ header
 
 .modal-header
   padding: 0 0 20px
+
   .close
     position: absolute
     right: 10px
@@ -1393,6 +1666,7 @@ header
     margin: 0
     z-index: 1
     opacity: 1
+
     &:before, &:after
       content: ''
       position: absolute
@@ -1402,14 +1676,17 @@ header
       height: 100%
       background: #000
       border-radius: 3px
+
     &:before
+      -webkit-transform: rotate(45deg)
       transform: rotate(45deg)
+
     &:after
+      -webkit-transform: rotate(135deg)
       transform: rotate(135deg)
 
-.modal-body
-  .box-text
-    font-size: 14px
+.modal-body .box-text
+  font-size: 14px
 
 .modal-title
   width: 100%
@@ -1417,24 +1694,29 @@ header
   font-weight: bold
   font-size: 22px
 
-.modal-dialog-scrollable .modal-body
-  overflow-y: visible
+.modal-dialog-scrollable
+  .modal-body
+    overflow-y: visible
 
+  .modal-content
+    overflow-y: auto
 
-.modal-dialog-scrollable .modal-content
-  overflow-y: auto
-
-.plane-modal
-  .modal-dialog
-    max-width: 98%
+.plane-modal .modal-dialog
+  max-width: 98%
 
 .plane-img-scheme
   width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
   display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
   align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
   justify-content: center
+
   img
     width: 100%
 
 @import "media"
-// Всегда в конце

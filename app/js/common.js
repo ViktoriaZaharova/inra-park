@@ -1,9 +1,11 @@
 $('.home-slider').slick({
     slidesToShow: 1,
     fade: true,
-    appendArrows: '.home-slider-nav',
-    prevArrow: '<button type="button" class="slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"></button>'
+    dots: true,
+    arrows: false,
+    // appendArrows: '.home-slider-nav',
+    // prevArrow: '<button type="button" class="slick-prev"></button>',
+    // nextArrow: '<button type="button" class="slick-next"></button>'
 });
 
 $('.choosing-a-home-slider').slick({
@@ -96,5 +98,14 @@ $('.btn-plane').on('click', function (e) {
 
         img1.show();
         img2.hide();
+    }
+});
+
+// header fised
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('header').addClass('fixed');
+    } else {
+        $('header').removeClass('fixed');
     }
 });

@@ -1,19 +1,19 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
+/*==========  Desktop First  ==========
 @media only screen and (max-width: 1920px)
   .accommodation-img
     margin: 0 -40%
 
-  .advantages-section:before
-    width: 427px
-    height: 449px
+  .advantages-section
+    &:before
+      width: 427px
+      height: 449px
 
-  .advantages-section:after
-    width: 420px
-    height: 446px
-    right: -40px
-
+    &:after
+      width: 420px
+      height: 446px
+      right: -40px
 
 @media only screen and (max-width: 1840px)
   .square-val
@@ -26,14 +26,14 @@
     font-size: 34px
     margin: 40px 0 20px
 
+  .advantages-section
+    &:before
+      width: 357px
+      height: 379px
 
-  .advantages-section:before
-    width: 357px
-    height: 379px
-
-  .advantages-section:after
-    width: 340px
-    height: 376px
+    &:after
+      width: 340px
+      height: 376px
 
   .type-cottage__img
     min-width: auto
@@ -50,15 +50,6 @@
 @media only screen and (max-width: 1800px)
   .news-box
     width: calc(100% - 20px)
-
-  .home-slider-box .btn
-    font-size: 20px
-    max-width: 280px
-    height: 60px
-    padding: 0 20px
-
-  .home-slider-box__title
-    font-size: 70px
 
   .square-val
     font-size: 90px
@@ -84,33 +75,27 @@
   .logo
     max-width: 200px
 
-  .menu
-    li
-      margin: 0 24px 0 0
+  .menu li
+    margin: 0 24px 0 0
 
   .content
-    padding: 98px 0 0
+    padding: 99px 0 0
 
   .subtitle-product
     font-size: 40px
-
 
 @media only screen and (max-width: 1600px)
   .description-product
     font-size: 28px
 
-
 @media only screen and (max-width: 1500px)
   .menu
-    font-size: 18px
-
     li
       margin: 0 20px 0 0
 
   .phone
     font-size: 18px
     padding: 10px 20px
-
 
   footer
     padding: 30px 0 34px
@@ -135,7 +120,6 @@
   .box-offer-text
     padding: 57px 60px 57px 0
     font-size: 20px
-
 
   .price
     font-size: 40px
@@ -172,7 +156,6 @@
   .type-cottage__content
     padding: 30px 30px 0 50px
 
-
   .price-wrapper:before
     left: -50px
 
@@ -201,7 +184,6 @@
   .advantages-box h3
     font-size: 24px
 
-
   .location-content
     padding: 40px 30px
 
@@ -219,14 +201,15 @@
     .box-text
       font-size: 24px
 
-  .advantages-section:before
-    width: 307px
-    height: 339px
-    left: -70px
+  .advantages-section
+    &:before
+      width: 307px
+      height: 339px
+      left: -70px
 
-  .advantages-section:after
-    width: 300px
-    height: 330px
+    &:after
+      width: 300px
+      height: 330px
 
   .location-content
     max-width: 540px
@@ -235,7 +218,7 @@
     width: calc(100% - 540px - 233px)
 
   .content
-    padding: 97px 0 0
+    padding: 94px 0 0
 
   .list-social
     margin: 0 30px 0 0
@@ -244,14 +227,19 @@
     font-size: 40px
 
 @media only screen and (max-width: 1280px)
-
-
   .master-plan-box__head
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
     flex-direction: column
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
 
     h2
       max-width: none
+      -webkit-box-ordinal-group: 0
+      -ms-flex-order: -1
       order: -1
       margin: 0 0 20px
 
@@ -260,24 +248,33 @@
     margin: 0
     padding: 10px 0 0
     border: none
-      top: 1px solid $accent
+    border-top: 1px solid #ddda3c
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
     flex-direction: row
+    -webkit-box-align: end
+    -ms-flex-align: end
     align-items: flex-end
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
+
     .box-text
       max-width: 300px
 
   .master-plan-box
     padding: 30px 20px 0 20px
+
     .box-text
       font-size: 18px
 
   .square-val
     font-size: 70px
     margin: 0 10px 0 0
+
     span
       font-size: 40px
-
 
   .location-content .box-text
     font-size: 22px
@@ -301,6 +298,8 @@
   .content
     padding: 88px 0 0
 
+  footer .list-social
+    margin: 0 20px 0 0
 
 @media only screen and (max-width: 1200px)
   .logo
@@ -312,12 +311,10 @@
     li
       margin: 0 15px 0 0
 
-  .list-social
-    li
-      a
-        width: 30px
-        height: 30px
-        padding: 5px
+  .list-social li a
+    width: 30px
+    height: 30px
+    padding: 5px
 
   .phone
     font-size: 16px
@@ -325,18 +322,12 @@
   h2
     font-size: 40px
 
-  .home-slider-box__content
-    flex-direction: column
-    align-items: flex-start
-    padding: 30px
+  .home-slider-box__title
+    font-size: 40px
 
-    .box-text
-      width: 100%
-      margin: 0 0 20px
+  .home-slider .slick-dots
+    bottom: 30px
 
-  .choosing-a-home:before
-    width: 200px
-    height: 180px
 
   .choosing-a-home-slider__box
     width: 650px
@@ -354,11 +345,12 @@
       font-size: 20px
       line-height: normal
 
-  .accommodation-content .box-text
-    font-size: 20px
+  .accommodation-content
+    .box-text
+      font-size: 20px
 
-  .accommodation-content h3
-    font-size: 40px
+    h3
+      font-size: 40px
 
   .advantages-box
     padding: 30px
@@ -375,26 +367,28 @@
   .sales-conditions-wrapper .box-text
     font-size: 20px
 
-  .advantages-section:before
-    width: 267px
-    height: 309px
-    top: -40px
+  .advantages-section
+    &:before
+      width: 267px
+      height: 309px
+      top: -40px
 
-  .advantages-section:after
-    width: 270px
-    height: 306px
+    &:after
+      width: 270px
+      height: 306px
 
   .location-content
     max-width: 400px
 
-  .location .tab-content
-    width: calc(100% - 400px - 180px)
+  .location
+    .tab-content
+      width: calc(100% - 400px - 180px)
 
-  .location .nav-tabs
-    max-width: 180px
+    .nav-tabs
+      max-width: 180px
 
   .content
-    padding: 85px 0 0
+    padding: 90px 0 0
 
   .subtitle-product
     font-size: 40px
@@ -403,19 +397,17 @@
   .master-plan-box__head h2
     font-size: 30px
 
-
-
-
-/* Medium Devices, Desktops */
+/* Medium Devices, Desktops
 @media only screen and (max-width: 1100px)
-  header, footer
-    .menu
-      display: none
+  header .menu, footer .menu
+    display: none
 
-    .logo
-      margin: 0 auto 0 0
+  header .logo, footer .logo
+    margin: 0 auto 0 0
 
   .btn-burger
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
 
 @media only screen and (max-width: 992px)
@@ -492,18 +484,12 @@
   .advantages-section
     padding: 70px 0 50px
 
-    &:before
+    &:before, &:after
       top: 50%
+      -webkit-transform: translate(0, -50%)
       transform: translate(0, -50%)
       width: 220px
       height: 280px
-
-    &:after
-      top: 50%
-      transform: translate(0, -50%)
-      width: 220px
-      height: 280px
-
 
   .distance
     margin: 40px auto 10px
@@ -529,16 +515,16 @@
   .sales-conditions-list__box-two, .sales-conditions-list__box
     padding: 30px 0
 
-    h3
-      font-size: 30px
-      margin: 0 0 20px
+  .sales-conditions-list__box-two h3, .sales-conditions-list__box h3
+    font-size: 30px
+    margin: 0 0 20px
 
-    .box-text
-      max-width: none
-      font-size: 18px
+  .sales-conditions-list__box-two .box-text, .sales-conditions-list__box .box-text
+    max-width: none
+    font-size: 18px
 
-      br
-        display: none
+  .sales-conditions-list__box-two .box-text br, .sales-conditions-list__box .box-text br
+    display: none
 
   .location .nav-tabs
     width: calc(100% + 30px)
@@ -561,7 +547,6 @@
     left: 0
     bottom: 0
 
-
 @media only screen and (max-width: 768px)
   footer
     padding: 20px 0 24px
@@ -571,7 +556,6 @@
 
   .news h2
     margin: 0 0 30px
-
 
   .choosing-a-home-slider__box
     width: 100%
@@ -588,20 +572,26 @@
     padding: 40px 0
 
   .square
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
     flex-direction: column
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
 
   .square-val
     font-size: 60px
     margin: 0 0 10px
+
     span
       font-size: 30px
       margin: 0
 
-  .master-plan-box .box-text
-    max-width: none
-
   .master-plan-box
+    .box-text
+      max-width: none
+
     padding: 20px 0
 
   .type-cottage h2
@@ -631,6 +621,7 @@
 
   .list-bank
     padding: 10px
+    -ms-flex-wrap: wrap
     flex-wrap: wrap
 
     .box-text
@@ -638,14 +629,17 @@
       max-width: none
       text-align: center
       border: none
-        top: 1px solid #000
+      border-top: 1px solid #000
       padding: 10px 0 0
       margin: 20px 0 0
 
   .type-cottage .nav-tabs .nav-item
     width: 50%
 
-/* Extra Small Devices, Phones */
+  .list-social li
+    margin: 0 5px 0 0
+
+/* Extra Small Devices, Phones
 @media only screen and (max-width: 576px)
   .news-box
     width: 100%
@@ -654,20 +648,17 @@
     font-size: 40px
     line-height: normal
 
-  .home-slider-box
-    padding: 300px 0 130px
-
-  .choosing-a-home:after
-    width: 100px
-    height: 120px
+  .home-slider-box__content
+    padding: 200px 0 130px
 
   .nav-tabs .nav-item
     width: 33.3%
+    -webkit-box-flex: 1
+    -ms-flex: auto
     flex: auto
 
   .type-cottage__img
     height: 400px
-
 
   .about-img
     padding: 30px
@@ -688,11 +679,7 @@
     font-size: 24px
 
   .advantages-section
-    &:before
-      width: 160px
-      height: 200px
-
-    &:after
+    &:before, &:after
       width: 160px
       height: 200px
 
@@ -703,9 +690,8 @@
     width: 33.3%
     font-size: 16px
 
-  header, footer
-    .list-social
-      display: none
+  header .list-social, footer .list-social
+    display: none
 
   .subtitle-product
     font-size: 30px
@@ -730,7 +716,12 @@
       height: 2px
 
   .price-wrapper
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
     flex-direction: column
+    -webkit-box-align: start
+    -ms-flex-align: start
     align-items: flex-start
 
   .mortgage-val
@@ -757,13 +748,19 @@
   .advantages-section
     padding: 30px 0 200px
 
-    &:after, &:before
+    &:after
       top: auto
       bottom: 0
+      -webkit-transform: none
       transform: none
       height: 170px
 
     &:before
+      top: auto
+      bottom: 0
+      -webkit-transform: none
+      transform: none
+      height: 170px
       left: -60px
 
     &:after
@@ -778,28 +775,27 @@
   .location-content .box-text
     font-size: 18px
 
-
-  .sales-conditions-list__box-two, .sales-conditions-list__box
-    h3
-      font-size: 24px
+  .sales-conditions-list__box-two h3, .sales-conditions-list__box h3
+    font-size: 24px
 
   .list-bank__item
     width: 50%
     margin: 0 0 10px
 
-  .sales-conditions-wrapper h2
-    font-size: 50px
+  .sales-conditions-wrapper
+    h2
+      font-size: 50px
 
-  .sales-conditions-wrapper .box-text
-    font-size: 18px
+    .box-text
+      font-size: 18px
 
   .location .nav-tabs .nav-item
     width: 50%
 
   .content
-    padding: 73px 0 0
+    padding: 79px 0 0
 
-/* Custom, iPhone Retina */
+/* Custom, iPhone Retina
 @media only screen and (max-width: 360px)
   .phone
     font-size: 12px
@@ -819,6 +815,5 @@
   .decor3
     max-width: 80px
 
-
   .content
-    padding: 67px 0 0
+    padding: 60px 0 0
