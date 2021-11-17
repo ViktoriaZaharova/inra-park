@@ -336,7 +336,7 @@ strong
     margin: 0 0 0 -1px
 
 h2
-  font-size: 60px
+  font-size: 45px
   font-weight: bold
   width: 100%
   color: #000
@@ -650,66 +650,44 @@ header
     max-width: 478px
     margin: 31px 0 0 0
     font-weight: 500
-    p
   .btn
     margin: 50px 0 0 auto
 
 .choosing-a-home
   position: relative
-  padding: 103px 0 107px
-
+  padding: 112px 0 97px
+  h2
+    font-size: 87.5px
   .box-text
-    margin: 30px 0 35px
-    max-width: 630px
+    margin: 49px 0 39px
+    max-width: 470px
     width: 100%
+    padding: 10px 0 10px 28px
+    border-left: 7px solid #d0c622
     line-height: 1.17
+
 
 .box-offer-text
   position: relative
-  z-index: 1
-  line-height: 1.2
-  font-size: 25px
-  padding: 57px 200px 57px 0
+  line-height: 1.67
+  font-size: 15px
 
-  &:before
-    content: ''
-    position: absolute
-    right: -30px
-    top: 0
-    height: 100%
-    width: 2000px
-    background: #ddda3c
-    z-index: -1
+.choosing-a-home__content
+  padding: 128px 154px 152px 570px
+  border: solid 10.2px #d0c622
 
-.choosing-a-home-content
-  position: relative
-  margin: 0 0 0 auto
 
-.choosing-a-home-slider
-  min-width: 2000px
-
-.choosing-a-home-slider__nav
-  position: absolute
-  right: 10px
-  bottom: 0
-
-.choosing-a-home-slider__box
-  display: -webkit-box
-  display: -ms-flexbox
+.choosing-a-home__img
   display: flex
-  -webkit-box-align: center
-  -ms-flex-align: center
   align-items: center
-  -webkit-box-pack: center
-  -ms-flex-pack: center
-  justify-content: center
-  margin: 0 75px 0 0
-  width: 724px
+  min-width: 910px
+  position: relative
+  z-index: 1
+  img
+    width: 100%
 
 .type-cottage
-  padding: 50px 0 89px
-
-  /*padding: 89px 0;
+  padding: 0 0 107px
 
   h2
     margin: 0 0 40px
@@ -735,7 +713,7 @@ header
   justify-content: center
   border: none
   line-height: 0.87
-  font-size: 33.5px
+  font-size: 25px
   font-weight: bold
 
   .nav-item
@@ -750,7 +728,7 @@ header
   .nav-link
     border: solid 1px #ddda3c
     border-radius: 0
-    height: 92px
+    height: 79px
     padding: 10px
     color: #000
     text-align: center
@@ -901,15 +879,16 @@ header
   justify-content: center
 
 .description-product
-  margin: 0 0 30px
+  margin: 0 0 46px
   color: #808080
-  font-size: 31px
+  font-size: 25px
   font-weight: 600
   line-height: 1.03
+  max-width: 500px
 
 .subtitle-product
-  margin: 0 0 21px
-  font-size: 54px
+  margin: 0 0 18px
+  font-size: 50px
   font-weight: bold
   line-height: .77
   color: #ddda3c
@@ -1035,8 +1014,6 @@ header
 .tab-content .container
   padding: 0
 
-.about .container
-  max-width: 1950px
 
 .logo-company
   max-width: 847px
@@ -1052,52 +1029,12 @@ header
   width: 100%
   margin: 0 0 0 auto
 
-.about-img
-  position: relative
-  z-index: 1
-  padding: 50px
-
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    right: -15px
-    height: 100%
-    z-index: -1
-    width: 2500px
-    background: #ddda3c
-
-  .image
-    position: absolute
-    left: -15px
-    bottom: 0
-    max-width: 624px
-    width: 100%
-    display: -webkit-box
-    display: -ms-flexbox
-    display: flex
-    -webkit-box-align: center
-    -ms-flex-align: center
-    align-items: center
-    -webkit-box-pack: end
-    -ms-flex-pack: end
-    justify-content: flex-end
-
-.decor
-  position: absolute
-
-.decor1
-  left: -20px
-  top: -10px
-
-.decor2
-  left: -20px
-  top: 50px
-  z-index: 2
-
-.decor3
-  right: -15px
-  top: -30px
+//.about
+.about
+  background: url("../img/about-img.jpg") no-repeat center
+    size: cover
+  overflow: hidden
+  padding: 0 0 350px
 
 .about-content
   height: 100%
@@ -1114,18 +1051,35 @@ header
   -webkit-box-pack: center
   -ms-flex-pack: center
   justify-content: center
-  max-width: 640px
+  max-width: 870px
   width: 100%
-  padding: 0 0 0 65px
+  position: relative
+  padding: 79px 178px 78px 0
 
+  //z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    width: 994px
+    height: 586px
+    background: url("../img/about-shadow.png") no-repeat center
+      size: cover
+    mix-blend-mode: screen
+  >*
+    position: relative
+    z-index: 1
   .box-text
     font-size: 25px
     line-height: 1.36
+    max-width: 550px
+    width: 100%
 
   h3
-    margin: 0 0 43px
-    font-size: 35px
-    font-weight: 600
+    margin: 0 0 18px
+    font-size: 45px
+    font-weight: 700
     line-height: 1.06
 
 .master-plan
@@ -1144,6 +1098,7 @@ header
   -webkit-box-pack: end
   -ms-flex-pack: end
   justify-content: flex-end
+  margin: 0 0 116px
 
 .master-plan-img
   width: 100%
@@ -1157,30 +1112,32 @@ header
     object-fit: cover
 
 .master-plan-box
-  width: -webkit-fit-content
   width: -moz-fit-content
   width: fit-content
-  z-index: 1
-  padding: 51px 65px 0 0
   position: absolute
   left: 0
   bottom: 0
-
+  padding: 0 15px 75px
   &:before
     content: ''
     position: absolute
-    right: 0
-    top: 0
-    background: #fff
-    width: 2000px
-    height: 100%
-    z-index: -1
-
+    right: -306px
+    top: 50%
+    transform: translate(0,-50%)
+    background: url("../img/plan-shadow.png") no-repeat center
+      size: 100%
+    mix-blend-mode: screen
+    width: 1831px
+    height: 836px
+  >*
+    position: relative
+    z-index: 1
   .box-text
     max-width: 650px
     width: 100%
-    font-size: 23px
-    line-height: 1.17
+    font-size: 18px
+    font-weight: 600
+    line-height: 1.39
 
 .master-plan-box__head
   display: -webkit-box
@@ -1196,35 +1153,33 @@ header
     max-width: 430px
 
 .square
-  padding: 0 38px 0 0
-  border-right: 2px solid #ddda3c
-  margin: 0 40px 0 0
+  padding: 0 30px 0 0
+  border-right: 2px solid #000
+  margin: 0 33px 0 0
 
   .box-text
     font-size: 17px
     line-height: 1.24
-    max-width: 190px
+    max-width: 210px
 
 .square-val
-  color: #ddda3c
   font-weight: bold
   line-height: 0.79
-  font-size: 134px
+  font-size: 109px
   margin: 0 0 15px -15px
 
   span
     line-height: 0.8
-    font-size: 61px
+    font-size: 50px
     margin: 0 0 0 -25px
 
 .accommodation
-  padding: 103px 0 0
+  padding: 101px 0 0
 
   h2
-    text-align: right
-    max-width: 1300px
+    max-width: 1200px
     width: 100%
-    margin: 0 0 2px auto
+    margin: 0 0 21px
 
 .accommodation-img
   width: 1373px
@@ -1237,36 +1192,25 @@ header
   -webkit-box-pack: end
   -ms-flex-pack: end
   justify-content: flex-end
-  position: relative
+  //position: relative
   z-index: 1
   height: 100%
+  margin: 0 0 -140px
 
 .accommodation-content
-  margin: 85px 0 0
-
+  margin: 0 0 67px
   h3
     position: relative
     z-index: 1
-    font-size: 60px
+    font-size: 45px
     font-weight: bold
-    max-width: 650px
+    max-width: 500px
     width: 100%
     line-height: 0.9
-    padding: 27px 0 20px
-
-    &:before
-      content: ''
-      position: absolute
-      z-index: -1
-      background: #ededed
-      height: 100%
-      width: 2600px
-      right: -1200px
-      top: 0
-
+    color: #ddda3c
+    margin: 0 0 22px
   .box-text
-    margin: 28px 0 0
-    max-width: 740px
+    max-width: 640px
     width: 100%
     font-size: 25px
     line-height: 1.36
@@ -1277,16 +1221,16 @@ header
 .advantages-box
   margin: 0 auto
   height: 100%
-  max-width: 418px
+  max-width: 380px
   width: 100%
   border: solid 2px #fff
-  padding: 45px 45px 49px 40px
+  padding: 38px 30px 47px 35px
   color: #000
 
   h3
-    font-size: 26px
+    font-size: 23px
     font-weight: bold
-    margin: 10px 0 17px
+    margin: 32px 0 10px
 
 .advantages-box__icon
   display: -webkit-box
@@ -1298,7 +1242,7 @@ header
   -webkit-box-pack: start
   -ms-flex-pack: start
   justify-content: flex-start
-  height: 123px
+  height: 112px
 
   img
     max-height: 100%
@@ -1306,46 +1250,48 @@ header
 .advantages-box .box-text
   line-height: 1.28
 
+.advantages-wrapper
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  border: solid 10.2px #d0c622
+  padding: 80px 70px 70px
+  z-index: -1
+
 .advantages-section
   z-index: 1
-  padding: 110px 0
+  padding: 45px 0 50px
   position: relative
-
-  &:before
-    content: ''
+  &__bg
     position: absolute
-    left: -80px
-    top: -60px
-    width: 467px
-    height: 499px
-    background: url("../img/kids1.png") no-repeat center
-    background-size: 100%
-    z-index: -1
+    left: 0
+    top: 0
+    z-index: 1
+    max-width: 1137px
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
 
-  &:after
-    content: ''
-    position: absolute
-    right: 43px
-    top: -50px
-    background: url("../img/kids2.png") no-repeat center
-    background-size: 100%
-    width: 420px
-    height: 446px
 
 .advantages-section__box
   position: relative
   z-index: 1
-
+  margin: 0 0 33px
+  &:last-child
+    margin: 0
   h3
-    font-size: 60px
-    margin: 0 0 34px
+    font-size: 45px
+    margin: 0 0 8px
     font-weight: bold
     color: #000
 
   .box-text
-    line-height: 1.36
-    font-size: 25px
-    max-width: 515px
+    line-height: 1.25
+    font-size: 16px
+    max-width: 480px
     width: 100%
 
 .sales-conditions-wrapper
@@ -1418,59 +1364,52 @@ header
 
 .sales-conditions-list
   width: 100%
+  padding: 45px 0 55px
 
 .sales-conditions-list__box
   width: 100%
   height: 100%
   position: relative
   z-index: 1
-  padding: 56px 67px 49px 0
+  padding: 0 120px 0 0
+  border-right: 2px solid #ddda3c
+  display: flex
+  flex-direction: column
 
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    right: -15px
-    height: 100%
-    width: 2000px
-    border: solid 1px #161800
-    z-index: -1
+
 
 .sales-conditions-list
   .box-text
-    font-size: 25px
-    line-height: 1.36
-    max-width: 470px
-
+    font-size: 16px
+    line-height: 1.25
+    margin: 0 0 auto
   .btn
-    margin: 8px 0 0 auto
-    height: 52px
-    max-width: 243px
+    margin: 22px 0 0 auto
+    height: 41px
+    max-width: 193px
     width: 100%
-    padding: 0 24px 0 33px
-    font-size: 19.5px
+    padding: 0 19px 0 27px
+    font-size: 15.5px
 
     .btn-icon
-      width: 10px
+      width: 8px
 
   h3
-    font-size: 60px
+    font-size: 23px
     font-weight: bold
-    margin: 0 0 23px
+    margin: 15px 0 13px
 
 .sales-conditions-list__box-two
-  padding: 56px 0 49px 64px
+  padding: 0 80px
 
+.sales-conditions-list__box-three
+  border: none
+  padding: 0 0 0 120px
   .box-text
-    max-width: none
-
-  &:before
-    left: -15px
-    right: auto
-    border-left: none
+    max-width: 250px
 
 .sales-conditions-list__box-wrap
-  max-width: 760px
+  max-width: 390px
   width: 100%
   height: 100%
 
@@ -1489,36 +1428,49 @@ header
   justify-content: center
 
   .tab-content
-    width: calc(100% - 720px - 233px)
+    width: calc(100% - 783px)
 
   .tab-pane
     width: 100%
     height: 100%
-
+  .nav-item
+    border-right: 1px solid #e3e15f
+    &:last-child
+      border: none
   .nav-link
-    border: solid 1px #000
-    font-size: 17px
+    background: #ddda3c
+    font-size: 14px
     font-weight: bold
-    height: 114px
-
+    border: none
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 100%
+    padding: 24px 10px
+    &__icons
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 auto 12px
     &.active
-      border: solid 1px #000
+      color: #fff
+      img
+        filter: brightness(0) invert(1)
 
   .nav-tabs
-    max-width: 233px
     width: 100%
-
+    order: 1
+    display: flex
+    align-items: stretch
     .nav-item
       margin: -1px 0 0
       width: 100%
-      -webkit-box-flex: 1
-      -ms-flex: auto
-      flex: auto
+
 
 .location-map
   width: 100%
   height: 100%
-  max-height: 797px
+  max-height: 689px
   float: right
   display: -webkit-box
   display: -ms-flexbox
@@ -1538,30 +1490,29 @@ header
     object-fit: cover
 
 .location-content
-  padding: 79px 10px 50px 47px
-  max-width: 720px
+  padding: 120px 10px 50px 109px
+  max-width: 783px
   width: 100%
   -webkit-box-ordinal-group: 2
   -ms-flex-order: 1
   order: 1
-  background: #ddda3c
 
   .box-text
-    font-size: 35px
-    line-height: 1.17
+    font-size: 25px
+    line-height: 1.36
 
 .location-content__wrapper
   max-width: 593px
   width: 100%
 
 .distance
-  margin: 69px 0 23px
-  color: #fff
-  font-size: 60px
+  margin: 36px 0 26px
+  color: #ddda3c
+  font-size: 45px
   font-weight: bold
-  max-width: 360px
+  max-width: 380px
   width: 100%
-  line-height: 0.87
+  line-height: 1
 
 .copyright
   margin: 20px 0 0 auto
@@ -1575,32 +1526,52 @@ header
   h2
     margin: 0 0 49px
 
-.news-slider
-  padding: 0 20px
-
-  .slick-arrow
-    position: absolute
-    top: 50%
-    -webkit-transform: translate(0, -50%)
-    transform: translate(0, -50%)
-
-  .slick-prev
-    left: 20px
-
-  .slick-next
-    right: 20px
 
 .news-box
-  max-width: 418px
   width: 100%
-  margin: 0 auto
-  background: #ededed
-
-.news-box__head
-  width: 100%
-  padding: 37px 36px 23px
-  font-size: 20px
-  font-weight: bold
+  margin: 0 0 30px
+  border: solid 1px #000
+  &:last-child
+    margin: 0
+  &__date
+    color: #acacac
+    font-size: 16px
+  .btn
+    margin: 0 0 0 auto
+    border: solid 1px #161800
+    padding: 0 15px 0 17px
+    height: 29px
+    max-width: 132px
+    width: 100%
+    font-weight: bold
+    font-size: 10.5px
+    .btn-icon
+      width: 6px
+  &__footer
+    width: 100%
+    margin: auto 0 0
+    position: relative
+    z-index: 1
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      width: calc(100% - 168px)
+      height: 3px
+      background: #acacac
+  &__body
+    width: 100%
+    padding: 30px 48px 35px
+    display: flex
+    flex-direction: column
+    .box-text
+      font-size: 23px
+      line-height: 1.04
+      color: #000
+      font-weight: bold
+      margin: 19px 0 24px
 
 .news-box__img
   width: 100%
@@ -1614,7 +1585,7 @@ header
   -ms-flex-pack: center
   justify-content: center
   overflow: hidden
-  height: 234px
+  height: 427px
 
   img
     width: 100%
@@ -1622,27 +1593,33 @@ header
     -o-object-fit: cover
     object-fit: cover
 
-.news-box__body
-  width: 100%
-  padding: 22px 23px 23px 35px
-
+.news-box-row
+  display: flex
+  align-items: stretch
+  height: 302px
+  .news-box__img
+    height: auto
+    width: 457px
+  .news-box__body
+    width: calc(100% - 457px)
+    padding: 50px 30px 20px
   .box-text
     font-size: 16px
-    line-height: 1.19
-    color: #000
-    max-width: 320px
+  .news-box__footer
+    &:before
+      width: 100%
+      height: 2px
+      position: relative
+      top: 0
+      left: 0
+      transform: none
+      margin: 0 0 30px
+      display: block
 
-.news-box .btn
-  margin: 20px 0 0 auto
-  border: solid 1px #161800
-  font-size: 10px
-  padding: 0 13px 0 16px
-  height: 27px
-  max-width: 122px
-  width: 100%
 
-  .btn-icon
-    width: 6px
+
+
+
 
 .modal-content
   border: none
