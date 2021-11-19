@@ -227,8 +227,8 @@ button:hover, button:focus {
   justify-content: center; }
 
 .container {
-  max-width: 1960px;
-  padding: 0 130px; }
+  max-width: 1920px;
+  padding: 0 135px; }
 
 .slick-slide {
   outline: none; }
@@ -551,6 +551,15 @@ header {
 .home-slider-box {
   position: relative;
   z-index: 1; }
+  .home-slider-box:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0;
+    width: 1064px;
+    background: url("../img/shadow-home.png") no-repeat center;
+      background-size: cover; }
   .home-slider-box:before {
     content: '';
     position: absolute;
@@ -594,16 +603,6 @@ header {
   width: 100%;
   color: #fff;
   padding: 388px 0 105px; }
-  .home-slider-box__content:before {
-    content: '';
-    position: absolute;
-    left: -132px;
-    height: 100%;
-    top: 0;
-    width: 1064px;
-    background: url("../img/shadow-home.png") no-repeat center;
-      background-size: cover;
-    z-index: -1; }
   .home-slider-box__content .box-text {
     max-width: 478px;
     margin: 31px 0 0 0;
