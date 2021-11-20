@@ -76,7 +76,7 @@ html, body
   -webkit-box-flex: 1
   -ms-flex: 1 0 auto
   flex: 1 0 auto
-  padding: 115px 0 0
+  padding: 114.5px 0 0
 
 footer
   -webkit-box-flex: 0
@@ -879,16 +879,16 @@ header
   justify-content: center
 
 .description-product
-  margin: 0 0 46px
+  margin: 0 0 30px
   color: #808080
-  font-size: 25px
+  font-size: 31px
   font-weight: 600
-  line-height: 1.03
-  max-width: 500px
+  line-height: 1.28
+  //max-width: 500px
 
 .subtitle-product
   margin: 0 0 18px
-  font-size: 50px
+  font-size: 54px
   font-weight: bold
   line-height: .77
   color: #ddda3c
@@ -1035,6 +1035,17 @@ header
     size: cover
   overflow: hidden
   padding: 0 0 350px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: -50px
+    left: 0
+    width: 994px
+    height: 586px
+    background: url("../img/about-shadow.png") no-repeat center
+      size: cover
+    mix-blend-mode: screen
 
 .about-content
   height: 100%
@@ -1057,16 +1068,7 @@ header
   padding: 79px 178px 78px 0
 
   //z-index: 1
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    right: 0
-    width: 994px
-    height: 586px
-    background: url("../img/about-shadow.png") no-repeat center
-      size: cover
-    mix-blend-mode: screen
+
   >*
     position: relative
     z-index: 1
@@ -1122,7 +1124,7 @@ header
     content: ''
     position: absolute
     right: -306px
-    top: 50%
+    top: 28%
     transform: translate(0,-50%)
     background: url("../img/plan-shadow.png") no-repeat center
       size: 100%
@@ -1195,7 +1197,7 @@ header
   //position: relative
   z-index: 1
   height: 100%
-  margin: 0 0 -140px
+  margin: 0 -60% -140px
 
 .accommodation-content
   margin: 0 0 67px
@@ -1271,8 +1273,8 @@ header
     left: 0
     top: 0
     z-index: 1
-    //max-width: 1137px
-    width: calc(100% - 783px)
+    width: 57%
+    //width: calc(100% - 833px)
     height: 100%
     img
       width: 100%
@@ -1310,7 +1312,7 @@ header
   .box-text
     line-height: 1.02
     font-size: 26px
-    max-width: 550px
+    //max-width: 550px
     strong
       font-weight: bold
 
@@ -1372,10 +1374,9 @@ header
 
 .sales-conditions-list
   width: 100%
-  padding: 45px 0 55px
+  padding: 57px 0 59px
 
 .sales-conditions-list__box
-  width: 100%
   height: 100%
   position: relative
   z-index: 1
@@ -1383,10 +1384,24 @@ header
   border-right: 2px solid #ddda3c
   display: flex
   flex-direction: column
+  width: 30%
+  &:last-child
+    border: none
+    width: 31.5%
+    padding: 0 0 0 125px
+    .box-text
+      max-width: 240px
+  &:nth-child(2)
+    padding: 0 120px
+    width: 38.5%
 
-
+.sales-conditions-list__content
+  align-items: stretch
+  display: flex
+  flex-wrap: wrap
 
 .sales-conditions-list
+
   .box-text
     font-size: 16px
     line-height: 1.25
@@ -1407,14 +1422,7 @@ header
     font-weight: bold
     margin: 15px 0 13px
 
-.sales-conditions-list__box-two
-  padding: 0 80px
 
-.sales-conditions-list__box-three
-  border: none
-  padding: 0 0 0 120px
-  .box-text
-    max-width: 250px
 
 .sales-conditions-list__box-wrap
   max-width: 390px
