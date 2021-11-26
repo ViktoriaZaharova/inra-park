@@ -6,6 +6,21 @@ $('.home-slider').slick({
     // appendArrows: '.home-slider-nav',
     // prevArrow: '<button type="button" class="slick-prev"></button>',
     // nextArrow: '<button type="button" class="slick-next"></button>'
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                asNavFor: ".home-slider-content"
+            }
+        }
+    ]
+});
+
+$('.home-slider-content').slick({
+    slidesToShow: 1,
+    fade: true,
+    arrows: false,
+    asNavFor: '.home-slider'
 });
 
 
@@ -15,7 +30,8 @@ $('.choosing-a-home__img').slick({
     dots: true,
     autoplay: true,
     autoplaySpeed: 2000,
-    fade: true
+    fade: true,
+
 });
 
 $('.btn-burger').on('click', function () {

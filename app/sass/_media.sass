@@ -721,9 +721,35 @@
   .home-slider-box__title
     font-size: 40px
     line-height: normal
+    color: #000
+    max-width: 400px
+    position: relative
+    margin: 0 0 20px
+    padding: 0 0 15px
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 2px
+      background: $accent
+      width: 100px
+
 
   .home-slider-box__content
-    padding: 200px 0 130px
+    padding: 40px 0
+    color: #000
+    .btn
+      display: none
+
+  .home-slider
+    .home-slider-box__content
+      display: none
+
+  .home-slider__bg
+    position: relative
+    height: auto
+    object-fit: contain
 
   .nav-tabs .nav-item
     width: 33.3%
@@ -915,3 +941,6 @@
   .news-box-row
     .news-box__img
       height: 250px
+
+  .home-slider-box__title
+    font-size: 30px
